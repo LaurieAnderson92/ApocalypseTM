@@ -4,6 +4,29 @@
     margin: 0;
     box-sizing:border-box;
 }
+/* header pictures */
+.picturebanner{
+    height: 175px;
+    display: flex;
+    flex-direction: row;
+}
+#bannerone{
+    background-color: green;
+    width: 300px
+}
+#bannertwo{
+    background-color: lightgreen;
+    width: 300px
+}
+#bannerthree{
+    background-color: lightseagreen;
+    width: 300px
+}
+#bannerfour{
+    background-color: darkgreen;
+    width: 300px
+}
+
 
 /* Global styles */
 
