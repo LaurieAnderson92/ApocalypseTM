@@ -177,6 +177,8 @@ Who wrote the content for the website? Was it yourself - or have you made the si
 ###  Media
 
 If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
+
+AI generated art from: [Deep Ai](https://deepai.org/)
   
 ###  Acknowledgments
 
