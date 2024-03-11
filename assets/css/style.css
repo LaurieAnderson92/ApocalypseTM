@@ -10,21 +10,22 @@
     display: flex;
     flex-direction: row;
 }
+.banner{
+    background-size: cover; 
+    width: 425px;
+    flex-grow: 1
+}
 #bannerone{
-    background-color: green;
-    width: 300px
+    background: url(../../assets/images/banner-bridge.jpeg) center/cover;
 }
 #bannertwo{
-    background-color: lightgreen;
-    width: 300px
+    background: url(../../assets/images/banner-highway.jpeg) center/cover;
 }
 #bannerthree{
-    background-color: lightseagreen;
-    width: 300px
+    background: url(../../assets/images/banner-thames.jpeg) center/cover;
 }
 #bannerfour{
-    background-color: darkgreen;
-    width: 300px
+    background: url(../../assets/images/banner-westminster.jpeg) center/cover;
 }
 
 
