@@ -4,17 +4,29 @@
     margin: 0;
     box-sizing:border-box;
 }
+/* Global styles */
+
 /* header pictures */
 .picturebanner{
     height: 175px;
     display: flex;
     flex-direction: row;
 }
+
 .banner{
     background-size: cover; 
     width: 425px;
-    flex-grow: 1
+    flex-grow: 1;
 }
+
+/* Logo position */
+.logo{
+    position: absolute;
+    width: 100%;
+    top: 1rem;
+    text-align: center;
+}
+
 #bannerone{
     background: url(../../assets/images/banner-bridge.jpeg) center/cover;
 }
@@ -29,9 +41,8 @@
 }
 
 
-/* Global styles */
 
-
+/* Footer */
 footer{
     position: fixed;
     bottom: 0px;
