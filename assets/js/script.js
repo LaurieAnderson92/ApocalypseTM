@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function displayEvents(){
     console.log("function display Events started")
     for (const event in events) {
         console.log("loading:" + events[event].eventName)
-        document.getElementById('header-event-infomation').innerHTML += `<div id="event${event}" class="events" onclick="displayEventInfo(${event})"> 
+        document.getElementById('header-event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"> 
         ${events[event].eventDate} - ${events[event].eventName}<br>
         ${events[event].eventLocation}
          </div>`

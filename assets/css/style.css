@@ -8,6 +8,13 @@
 .hidden{
     display: none;
 }
+.div-border{
+    background-color: rgba(215,215, 215, 0.7) ;
+    border-style:solid;
+    border-width: 1px;
+    border-color: whitesmoke
+}
+
 
 /* header pictures */
 #picturebanner{
@@ -43,10 +50,14 @@
     background: url(../../assets/images/banner-westminster.jpeg) center/cover;
 }
 
+/* Events */
+.event-group{
+    background: url(../../assets/images/banner-highway.jpeg) center/cover;
+}
 
 
 /* Footer */
 footer{
-    position: fixed;
+    position: sticky;
     bottom: 0px;
 }
