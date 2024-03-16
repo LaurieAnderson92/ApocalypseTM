@@ -20,12 +20,10 @@
     </header>
     <nav>
         <h2 class="hidden">Navigation menu</h2>
-        <div id="nav-menu" class="div-border"><i class="fa-solid fa-bars"></i></div>
-        <div class="div-border" id="nav-character">
-            <p>Create an Character</p>
-        </div>
-        <div id="nav-dropdown" class="div-border">
-            <ul>
+        <div id="nav-menu" class="div-border" onclick="openDropdown()">
+            <i class="fa-solid fa-bars"></i>
+            <div id="nav-dropdown" class="div-border dropdown-animation">
+            <ul class="dropdown-animation">
                 <li>The Game</li>
                 <li>The Setting</li>
                 <li>The Rules</li>
@@ -33,7 +31,10 @@
                 <li>Sign Up!</li>
             </ul>
         </div>
-        
+    </div>
+        <div class="div-border" id="nav-character">
+            <p>Create an Character</p>
+        </div>
     </nav>
     <section>
         <h2>Heading</h2>

@@ -22,10 +22,20 @@ let events = [
 
 //Code that runs on a click on the DOM
 
-// displaus event Info when the Dic is clicked
+// displays event Info
 function displayEventInfo(event){
-    document.getElementById('header-event-details').innerHTML = `${events[event].eventInfo}`
+    document.getElementById('event-details').innerHTML = `${events[event].eventInfo}`
 }
+
+function openDropdown(){
+    let dropdownArray = document.getElementsByClassName("dropdown-animation")
+    let dropdownArrayLength = dropdownArray.length
+    for (let i = 0; i < dropdownArrayLength; i++ ) {
+        dropdownArray[i].classList.toggle("dropdown-animation-active")
+    }
+    
+}
+
 
 // Code that runs when the DOM loads
 

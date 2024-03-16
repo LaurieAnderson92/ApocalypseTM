@@ -57,11 +57,33 @@ nav{
     display: flex;
     flex-wrap: wrap;
 }
+/* acts as the starting point for the dropdown animation "openDropdown" Function */
+.dropdown-animation{
+opacity: 0;
+transform: translateY(-25px);
+transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+}
+
+.dropdown-animation-active{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+}
+
 #nav-menu{
     width: 20%;
 }
 #nav-character{
     width: 80%;
+}
+#nav-dropdown{
+    width: 40%;
+    position: absolute;
+    top: calc(175px + 2rem);
+    left: .5rem;
+    background-color: brown;
+    padding: .75rem;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
 
 /* Events */
