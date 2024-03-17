@@ -27,10 +27,10 @@ function displayEventInfo(event){
     document.getElementById('event-details').innerHTML = `${events[event].eventInfo}`
 }
 
+// closes dropdown when clicking outside the menu
 var dropdownToggle = false
-
-document.addEventListener("click", function closeDropdownOnClick(){
-    if (EventTarget !== document.getElementsByTagName("nav") && dropdownToggle == true){
+document.addEventListener("click", function closeDropdownOnClick(event){
+    if (!event.target.closest("nav") && dropdownToggle){
         let dropdownArray = document.getElementsByClassName("dropdown-animation")
         let dropdownArrayLength = dropdownArray.length
         for (let i = 0; i < dropdownArrayLength; i++ ) {
@@ -40,15 +40,16 @@ document.addEventListener("click", function closeDropdownOnClick(){
         }
 })
 
+/**
+ * This function opens the Nav Dropdown
+ */
 function openDropdown(){
-    debugger
     dropdownToggle = true
     let dropdownArray = document.getElementsByClassName("dropdown-animation")
     let dropdownArrayLength = dropdownArray.length
     for (let i = 0; i < dropdownArrayLength; i++ ) {
         dropdownArray[i].classList.toggle("dropdown-animation-active")
     }
-    
 }
 
 // Code that runs when the DOM loads
