@@ -27,7 +27,22 @@ function displayEventInfo(event){
     document.getElementById('event-details').innerHTML = `${events[event].eventInfo}`
 }
 
+var dropdownToggle = false
+
+document.addEventListener("click", function closeDropdownOnClick(){
+    if (EventTarget !== document.getElementsByTagName("nav") && dropdownToggle == true){
+        let dropdownArray = document.getElementsByClassName("dropdown-animation")
+        let dropdownArrayLength = dropdownArray.length
+        for (let i = 0; i < dropdownArrayLength; i++ ) {
+            dropdownArray[i].classList.remove("dropdown-animation-active")
+        }
+        dropdownToggle = false
+        }
+})
+
 function openDropdown(){
+    debugger
+    dropdownToggle = true
     let dropdownArray = document.getElementsByClassName("dropdown-animation")
     let dropdownArrayLength = dropdownArray.length
     for (let i = 0; i < dropdownArrayLength; i++ ) {
@@ -35,7 +50,6 @@ function openDropdown(){
     }
     
 }
-
 
 // Code that runs when the DOM loads
 
