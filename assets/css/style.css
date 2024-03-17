@@ -72,6 +72,7 @@ transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
 
 #nav-menu{
     width: 20%;
+    z-index: 1;
 }
 #nav-character{
     width: 80%;
@@ -79,11 +80,12 @@ transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
 #nav-dropdown{
     width: 40%;
     position: absolute;
-    top: calc(175px + 2rem);
+    top: calc(175px + 2.75rem);
     left: .5rem;
     background-color: brown;
     padding: .75rem;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+    z-index: 0;
 }
 
 /* Events */
