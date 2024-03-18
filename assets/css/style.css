@@ -97,5 +97,10 @@ transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
 /* Footer */
 footer{
     position: sticky;
-    bottom: 0px;
+    bottom: 0vw;
+    display: flex;
+}
+footer > p,i{
+    text-align: center;
+    vertical-align: middle;
 }
