@@ -20,6 +20,51 @@ let events = [
     eventInfo: "Placeholder for description of Event 3"}
     ];
 
+let skills =[
+    {
+        name: "Strength",
+        cost: 1,
+        type: ["Physical"],
+        restrictions: "N/A",
+        description: "Placeholder text"
+    },
+    {
+        name: "Willpower",
+        cost: 1,
+        type: ["Mental", "Social"],
+        restrictions: "N/A",
+        description: "Placeholder text"
+    },
+    {
+        name: "Endurance",
+        cost: 1,
+        type: ["Physical"],
+        restrictions: "N/A",
+        description: "Placeholder text"
+    },
+    {
+        name: "Computer Use",
+        cost: 1,
+        type: ["Mental"],
+        restrictions: "N/A",
+        description: "Placeholder text"
+    },
+    {
+        name: "Scavange",
+        cost: 1,
+        type: ["Physical"],
+        restrictions: "N/A",
+        description: "Placeholder text"
+    },
+    {
+        name: "Medical use",
+        cost: 1,
+        type: ["Mental"],
+        restrictions: "N/A",
+        description: "Placeholder text"
+    }
+]
+
 //Code that runs on a click on the DOM
 
 // displays event Info

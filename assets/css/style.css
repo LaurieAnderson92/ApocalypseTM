@@ -89,6 +89,18 @@ transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
     z-index: 0;
 }
 
+/* This section of for styles that happen on individual Pages */
+
+/* Rules Page */
+.rules-selector{
+    padding: 3rem;
+}
+#rules-nav{
+    display: flex;
+}
+
+
+
 /* Events */
 .event-group{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;
