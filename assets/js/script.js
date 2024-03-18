@@ -29,6 +29,7 @@ function displayEventInfo(event){
 
 // closes dropdown when clicking outside the menu
 var dropdownToggle = false
+
 document.addEventListener("click", function closeDropdownOnClick(event){
     if (!event.target.closest("nav") && dropdownToggle){
         let dropdownArray = document.getElementsByClassName("dropdown-animation")
@@ -56,9 +57,7 @@ function openDropdown(){
 
 //This function gets the event objects and displays each event as a individual div
 document.addEventListener("DOMContentLoaded", function displayEvents(){
-    console.log("function display Events started")
     for (const event in events) {
-        console.log("loading:" + events[event].eventName)
         document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"> 
         ${events[event].eventDate} - ${events[event].eventName}<br>
         ${events[event].eventLocation}
