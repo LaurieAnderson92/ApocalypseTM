@@ -1,6 +1,6 @@
 # ApocalypseTM
 
-Add a Blurb about the site here, what does it do, why did you build it?
+ApocalypseTM acts as a advert and a point of refrence for a upcoming UK based Live Action Roleplay with the same name, it contains the rules for how the game is goverened, the setting brief that the players need to know and funtionality to build a character for the game. As a new system designed by hobbiests, the rules and information may need to be updated regulaly. So utilizing Javascript a rule only needs to be updated in one location for it to be updated throughout the entire site.
 
 Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
 
@@ -53,7 +53,20 @@ test
 
 ### User Stories
 
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+New LARPers, Users who haven't larped before, or have little experience Larping
+- A first timer who is new to LARP should be able to find out what LARP is
+- A first timer who is looking to attend their first LARP should find a clear list of what is expected of them
+- Their experience of the website should be enhanced with intuitive navigation 
+
+Players, who have signed up to the game and are looking for rules or event information
+- A player should be able to see, at a glance when the next event is and what the synopsis for the event is
+- A player should be able to easily navigate the rules for how the game works
+- Their experience should be thematic with a good user experience.
+
+Refs, users who may use the website to help them run a game.
+- A ref should be able to refer to rules quickly and have all of the information they need to make a ruling
+- A ref should have easy access to the conduct rules incase players are in breach of them.
+- Their experience should be focused on getting information that they need quickly, likely on a mobile screen.
 
 ## Design
 
@@ -79,7 +92,7 @@ I also like to include an image of the fonts chosen as a reference.
 
 ### Imagery
 
-Use this section to explain what sort of imagery you plan to use through your site.
+The main imagry in this site is going to be London after a extintion event. The devestation levels are low, but nature will be reclaiming the world. the site will follow these warm dirt colors with effects to make images look weathered.
 
 ### Wireframes
 
@@ -123,7 +136,9 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 
 ### Languages Used
 
-Make a note here of all the languages used in creating your project.
+- HTML5
+- CSS
+-JavaScript
 
 ### Frameworks, Libraries & Programs Used
 
@@ -173,7 +188,7 @@ If you have used some code in your project that you didn't write, this is the pl
 
 ### Content
 
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
+The content was provided by myself and a friend called Richard Morgan, who is one of the top refs for ApocaplyseTM
 
 ###  Media
 
