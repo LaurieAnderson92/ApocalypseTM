@@ -93,13 +93,13 @@ transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
 
 /* Rules Page */
 .rules-selector{
-    padding: 3rem;
+    padding: 2rem;
+    text-align: center;
+    flex-grow: 1;
 }
 #rules-nav{
     display: flex;
 }
-
-
 
 /* Events */
 .event-group{
