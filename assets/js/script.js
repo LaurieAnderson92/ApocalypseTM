@@ -108,6 +108,7 @@ function replaceDashesWithSpaces(string){
 
 // Displays the Rules when click
 function displaySkills(){
+    rulesSection.innerHTML = ''
     for (const skill in skills){
         rulesSection.innerHTML += `
         <div id=${skills[skill].name} class="skill-box">
