@@ -22,42 +22,42 @@ let events = [
 
 let skills =[
     {
-        name: "Strength",
+        name: "strength",
         cost: 1,
         type: ["Physical"],
         restrictions: "N/A",
         description: "Placeholder text"
     },
     {
-        name: "Willpower",
+        name: "willpower",
         cost: 1,
         type: ["Mental", "Social"],
         restrictions: "N/A",
         description: "Placeholder text"
     },
     {
-        name: "Endurance",
+        name: "endurance",
         cost: 1,
         type: ["Physical"],
         restrictions: "N/A",
         description: "Placeholder text"
     },
     {
-        name: "Computer Use",
+        name: "computer-use",
         cost: 1,
         type: ["Mental"],
         restrictions: "N/A",
         description: "Placeholder text"
     },
     {
-        name: "Scavange",
+        name: "scavange",
         cost: 1,
         type: ["Physical"],
         restrictions: "N/A",
         description: "Placeholder text"
     },
     {
-        name: "Medical use",
+        name: "medical-use",
         cost: 1,
         type: ["Mental"],
         restrictions: "N/A",
@@ -67,30 +67,15 @@ let skills =[
 
 //Code that runs on a click on the DOM
 
-// displays event Info
+// displays event Info on every page when user clicks on the event
 function displayEventInfo(event){
     document.getElementById('event-details').innerHTML = `${events[event].eventInfo}`
 }
-
-// closes dropdown when clicking outside the menu
-var dropdownToggle = false
-
-document.addEventListener("click", function closeDropdownOnClick(event){
-    if (!event.target.closest("nav") && dropdownToggle){
-        let dropdownArray = document.getElementsByClassName("dropdown-animation")
-        let dropdownArrayLength = dropdownArray.length
-        for (let i = 0; i < dropdownArrayLength; i++ ) {
-            dropdownArray[i].classList.remove("dropdown-animation-active")
-        }
-        dropdownToggle = false
-        }
-})
 
 /**
  * This function opens the Nav Dropdown
  */
 function openDropdown(){
-    dropdownToggle = true
     let dropdownArray = document.getElementsByClassName("dropdown-animation")
     let dropdownArrayLength = dropdownArray.length
     for (let i = 0; i < dropdownArrayLength; i++ ) {
@@ -98,8 +83,44 @@ function openDropdown(){
     }
 }
 
-// Code that runs when the DOM loads
+// closes dropdown when clicking outside the menu
+document.addEventListener("click", function closeDropdownOnClick(event){
+    if (!event.target.closest("nav") 
+){
+        let dropdownArray = document.getElementsByClassName("dropdown-animation")
+        let dropdownArrayLength = dropdownArray.length
+        for (let i = 0; i < dropdownArrayLength; i++ ) {
+            dropdownArray[i].classList.remove("dropdown-animation-active")
+        }
+        }
+})
+// ****Rules Page****
+let rulesSection = document.getElementById("rules-display")
+/**
+ * This function takes a string and returns the same string with a capitalized first letter
+ */
+function capitalizeFirstLetter(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function replaceDashesWithSpaces(string){
+    return string.replace('-', ' ')
+}
 
+// Displays the Rules when click
+function displaySkills(){
+    for (const skill in skills){
+        rulesSection.innerHTML += `
+        <div id=${skills[skill].name} class="skill-box">
+            <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3><h3>${skills[skill].cost}</h3>
+            <p><b>Restrictions:</b> ${skills[skill].restrictions}</p>
+            <p>${skills[skill].description}</p>
+        </div>
+        <br>
+        `
+    }
+}
+
+// ****Code that runs when the DOM loads****
 //This function gets the event objects and displays each event as a individual div
 document.addEventListener("DOMContentLoaded", function displayEvents(){
     for (const event in events) {
