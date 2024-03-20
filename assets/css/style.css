@@ -72,8 +72,6 @@ pointer-events: none;
     pointer-events: all
 }
 
-
-
 #nav-menu{
     width: 20%;
     z-index: 1;
@@ -101,6 +99,12 @@ z-index: 0;
     text-align: center;
     flex-grow: 1;
 }
+.skill-heading{
+    display: flex;
+    width: 60%;
+    max-width: 300px;
+}
+
 #rules-nav{
     display: flex;
 }

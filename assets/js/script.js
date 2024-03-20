@@ -106,7 +106,8 @@ function replaceDashesWithSpaces(string){
     return string.replace('-', ' ')
 }
 function displayConductRules(){
-    rulesSection.innerHTML = `<h2>Game Rules</h2>`
+    rulesSection.innerHTML =`<h2>Game Rules</h2>
+                            <br>`
     rulesSection.innerHTML += `<h3>Be nice</h3>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -153,7 +154,8 @@ function displayConductRules(){
 }
 function displayGameRules(){
     console.log("click")
-    rulesSection.innerHTML = `<h2>Game Rules</h2>`
+    rulesSection.innerHTML =`<h2>Game Rules</h2>
+                            <br>`
     rulesSection.innerHTML += `<h3>Combat</h3>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -200,11 +202,12 @@ function displayGameRules(){
 }
 // Displays the Rules when click
 function displaySkills(){
-    rulesSection.innerHTML = `<h2>Skills</h3>`
+    rulesSection.innerHTML =`<h2>Skills</h3>
+                            <br>`
     for (const skill in skills){
         rulesSection.innerHTML += `
         <div id=${skills[skill].name} class="skill-box">
-            <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3><h3>${skills[skill].cost}</h3>
+            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3><h3>${skills[skill].cost}</h3></span>
             <p><b>Restrictions:</b> ${skills[skill].restrictions}</p>
             <p>${skills[skill].description}</p>
         </div>
