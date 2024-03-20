@@ -216,7 +216,9 @@ function displaySkills(){
     }
 }
 // Character Page
-
+/**
+ * This function displays a character image based off the origin
+ */
 function displayRefImage(origin){
     picture = document.getElementById("reference-image")
     if (origin == "Blank"){
@@ -232,6 +234,31 @@ function displayRefImage(origin){
     }else if (origin == "enhanced"){
         picture.innerHTML = `<img class="drop-animation" src="assets/images/character-enhanced.jpeg" width="300px">`
     }
+}
+/**
+ * This function fetches all the skills in the object array and returns them as options for a HTML form with a onforminput attrubite that calls function dropSkillFromArray()
+ */
+function fetchSkills(){
+    let skillList = document.getElementById("form-characterskills")
+    skillList.innerHTML = ""
+    for (let skill in skills){ 
+        skillList.innerHTML += `<span class="form-skill-options">
+        <label for="${skills[skill].name}">
+        IconPlaceholder
+        <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
+        <h4>${skills[skill].cost}</h4></label>
+        <input type="checkbox" name="${skills[skill].name}" id="${skills[skill].name}">
+        </input>
+        </span>`
+    }
+}
+
+/**
+ * This function drops the selected skill from the array and makes a new input with the new array
+ */
+function dropSkillFromArray(skill){
+    skills = skills.slice(skill,1)
+    console.log(skills)
 }
 
 

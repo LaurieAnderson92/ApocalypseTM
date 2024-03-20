@@ -58,9 +58,9 @@
             </div>
             
             <!-- Skills input -->
-            <div class="form-group" id="form-skilldetails">
-              <label class="form-label" for="character-origin">Origin</label>
-                <select id="character-origin" name="character-origin" class="form-control" onchange="displayRefImage(this.value)" required>
+            <div class="form-group" id="form-origindetails">
+                <label class="form-label" for="character-origin">Origin</label>
+                <select id="character-origin" name="character-origin" class="form-control" onchange="displayRefImage(this.value), fetchSkills()" required>
                     <option value="blank"></option>  
                     <option value="dweller">Dweller</option>
                     <option value="wastelander">Wastelander</option>
@@ -68,22 +68,16 @@
                     <option value="altered">Altered</option>
                     <option value="enhanced">Enhanced</option>
                 </select>
-        
-              <label class="form-label" for="character-skills">Skills</label>
-                <select id="character-skills" name="character-skills" class="form-control" multiple="multiple">
-                    <!-- Placeholder for Skill Fetch -->
-                    <option value="1">Option one</option>
-                    <option value="2">Option two</option>
-                </select>
+            <div class="form-group" id="form-characterskills">
+                
             </div>
             
             <!-- Button (Double) -->
             <div class="form-group">
-              <label class="form-button" for="character-submit"></label>
+                <label class="form-button" for="character-submit"></label>
                 <button id="character-submit" name="character-submit" class="btn btn-success">Submit</button>
                 <button id="character-clear" name="character-clear" class="btn btn-clear">Clear</button>
             </div>
-            <div id="character-skills" class="form-group">Placeholder for skills</div>
             <div id="reference-image" class="form-group">Placeholder for image</div>
             </fieldset>
         </form>
