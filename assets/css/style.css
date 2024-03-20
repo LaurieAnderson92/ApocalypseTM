@@ -109,6 +109,19 @@ z-index: 0;
     display: flex;
 }
 
+/* Character Page */
+.character-form{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
 /* Events */
 .event-group{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;

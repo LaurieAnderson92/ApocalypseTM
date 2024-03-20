@@ -43,14 +43,18 @@
             
             <!-- Name input-->
             <div class="form-group" id="form-playerdetails">
-              <label class="form-label" for="playername">Player Name</label>  
-              <input id="player-name" name="playername" type="text" placeholder="" class="form-control" required>
-            
-              <label class="form-label" for="character-name">Character Name</label>  
-              <input id="character-name" name="character-name" type="text" placeholder="" class="form-control" required>
-
-              <label class="form-label" for="player-email">Player Email Address</label>  
-              <input id="player-email" name="player-email" type="email" placeholder="" class="form-control" required>
+                <span>
+                    <label class="form-label" for="playername">Player Name</label>  
+                    <input id="player-name" name="playername" type="text" placeholder="" class="form-control" required>
+                </span>
+                <span>
+                    <label class="form-label" for="character-name">Character Name</label>  
+                    <input id="character-name" name="character-name" type="text" placeholder="" class="form-control" required>
+                </span>
+                <span>
+                    <label class="form-label" for="player-email">Player Email Address</label>  
+                    <input id="player-email" name="player-email" type="email" placeholder="" class="form-control" required>
+                </span>    
             </div>
             
             <!-- Skills input -->
@@ -75,11 +79,11 @@
             <!-- Button (Double) -->
             <div class="form-group">
               <label class="form-button" for="character-submit"></label>
-              <div class="col-md-8">
                 <button id="character-submit" name="character-submit" class="btn btn-success">Submit</button>
                 <button id="character-clear" name="character-clear" class="btn btn-clear">Clear</button>
-              </div>
             </div>
+            <div id="character-skills" class="form-group">Placeholder for skills</div>
+            <div id="reference-image" class="form-group">Placeholder for image</div>
             </fieldset>
         </form>
             
