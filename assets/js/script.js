@@ -248,7 +248,7 @@ function formFetchSkills(){
         IconPlaceholder
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <h4>${skills[skill].cost}</h4></label>
-        <input type="checkbox" name="${skills[skill].name}" id="checkbox-${skills[skill].name}">
+        <input type="checkbox" name="${skills[skill].name}" id="checkbox-">
         </input>
         </span>`
     }
@@ -258,7 +258,8 @@ function formFetchSkills(){
         selectedSkillList.innerHTML += `<span class="form-skill-selection ${"Positive/Negative/Neutral"}" id="selected-${skills[skill].name}">
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <p>${skills[skill].description}</p>
-        </span>`
+        </span>
+        <style> #checkbox-${skills[skill].name}:checked~#selected-${skills[skill].name}{display: block; }</style>`
     }
 
 }
