@@ -60,7 +60,7 @@
             <!-- Skills input -->
             <div class="form-group" id="form-origindetails">
                 <label class="form-label" for="character-origin">Origin</label>
-                <select id="character-origin" name="character-origin" class="form-control" onchange="displayRefImage(this.value), fetchSkills()" required>
+                <select id="character-origin" name="character-origin" class="form-control" onchange="displayRefImage(this.value), formFetchSkills()" required>
                     <option value="blank"></option>  
                     <option value="dweller">Dweller</option>
                     <option value="wastelander">Wastelander</option>
@@ -79,6 +79,7 @@
                 <button id="character-clear" name="character-clear" class="btn btn-clear">Clear</button>
             </div>
             <div id="reference-image" class="form-group">Placeholder for image</div>
+            <div id="character-skilllist" class="form-group">Placeholder for skills</div>
             </fieldset>
         </form>
             

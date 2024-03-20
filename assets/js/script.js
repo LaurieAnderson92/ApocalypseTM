@@ -238,30 +238,20 @@ function displayRefImage(origin){
 /**
  * This function fetches all the skills in the object array and returns them as options for a HTML form with a onforminput attrubite that calls function dropSkillFromArray()
  */
-function fetchSkills(){
+function formFetchSkills(){
     let skillList = document.getElementById("form-characterskills")
     skillList.innerHTML = ""
     for (let skill in skills){ 
         skillList.innerHTML += `<span class="form-skill-options">
-        <label for="${skills[skill].name}">
+        <label for="checkbox-${skills[skill].name}">
         IconPlaceholder
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <h4>${skills[skill].cost}</h4></label>
-        <input type="checkbox" name="${skills[skill].name}" id="${skills[skill].name}">
+        <input type="checkbox" name="${skills[skill].name}" id="checkbox-${skills[skill].name}">
         </input>
         </span>`
     }
 }
-
-/**
- * This function drops the selected skill from the array and makes a new input with the new array
- */
-function dropSkillFromArray(skill){
-    skills = skills.slice(skill,1)
-    console.log(skills)
-}
-
-
 
 // ****Code that runs when the DOM loads****
 //This function gets the event objects and displays each event as a individual div
