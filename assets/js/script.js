@@ -236,10 +236,11 @@ function displayRefImage(origin){
     }
 }
 /**
- * This function fetches all the skills in the object array and returns them as options for a HTML form with a onforminput attrubite that calls function dropSkillFromArray()
+ * This function fetches all the skills in the object array and returns them as booleans for a HTML form
  */
 function formFetchSkills(){
     let skillList = document.getElementById("form-characterskills")
+    let selectedSkillList = document.getElementById("character-skilllist")
     skillList.innerHTML = ""
     for (let skill in skills){ 
         skillList.innerHTML += `<span class="form-skill-options">
@@ -251,6 +252,15 @@ function formFetchSkills(){
         </input>
         </span>`
     }
+    selectedSkillList.innerHTML = ""
+    // Need to add object properties to pop different classes based on positive/negative value
+    for (let skill in skills){
+        selectedSkillList.innerHTML += `<span class="form-skill-selection ${"Positive/Negative/Neutral"}" id="selected-${skills[skill].name}">
+        <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
+        <p>${skills[skill].description}</p>
+        </span>`
+    }
+
 }
 
 // ****Code that runs when the DOM loads****
