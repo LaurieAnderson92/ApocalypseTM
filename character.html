@@ -36,22 +36,53 @@
         </div>
     </nav>
     <section>
-        <h2>Heading</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h2>Heading</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h2>Heading</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h2>Heading</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <form class="character-form">
+            <fieldset>
+            <!-- Form Name -->
+            <legend>Character Builder</legend>
+            
+            <!-- Name input-->
+            <div class="form-group" id="form-playerdetails">
+              <label class="form-label" for="playername">Player Name</label>  
+              <input id="player-name" name="playername" type="text" placeholder="" class="form-control" required>
+            
+              <label class="form-label" for="character-name">Character Name</label>  
+              <input id="character-name" name="character-name" type="text" placeholder="" class="form-control" required>
+
+              <label class="form-label" for="player-email">Player Email Address</label>  
+              <input id="player-email" name="player-email" type="email" placeholder="" class="form-control" required>
+            </div>
+            
+            <!-- Skills input -->
+            <div class="form-group" id="form-skilldetails">
+              <label class="form-label" for="character-origin">Origin</label>
+                <select id="character-origin" name="character-origin" class="form-control" required>
+                  <option value="1">Option one</option>
+                  <option value="2">Option two</option>
+                  <option value="3">Option three</option>
+                  <option value="4">Option four</option>
+                  <option value="5">Option five</option>
+                </select>
+        
+              <label class="form-label" for="character-skills">Skills</label>
+                <select id="character-skills" name="character-skills" class="form-control" multiple="multiple">
+                    <!-- Placeholder for Skill Fetch -->
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                </select>
+            </div>
+            
+            <!-- Button (Double) -->
+            <div class="form-group">
+              <label class="form-button" for="character-submit"></label>
+              <div class="col-md-8">
+                <button id="character-submit" name="character-submit" class="btn btn-success">Submit</button>
+                <button id="character-clear" name="character-clear" class="btn btn-clear">Clear</button>
+              </div>
+            </div>
+            </fieldset>
+        </form>
+            
     </section>
     <section>
         <div class="event-group">
