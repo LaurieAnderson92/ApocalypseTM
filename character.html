@@ -60,12 +60,13 @@
             <!-- Skills input -->
             <div class="form-group" id="form-skilldetails">
               <label class="form-label" for="character-origin">Origin</label>
-                <select id="character-origin" name="character-origin" class="form-control" required>
-                  <option value="1">Option one</option>
-                  <option value="2">Option two</option>
-                  <option value="3">Option three</option>
-                  <option value="4">Option four</option>
-                  <option value="5">Option five</option>
+                <select id="character-origin" name="character-origin" class="form-control" onchange="displayRefImage(this.value)" required>
+                    <option value="blank"></option>  
+                    <option value="dweller">Dweller</option>
+                    <option value="wastelander">Wastelander</option>
+                    <option value="twisted">Twisted</option>
+                    <option value="altered">Altered</option>
+                    <option value="enhanced">Enhanced</option>
                 </select>
         
               <label class="form-label" for="character-skills">Skills</label>

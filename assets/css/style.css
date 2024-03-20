@@ -8,6 +8,12 @@
 .hidden{
     display: none;
 }
+.drop-animation{
+    transform: translateY(-25px);
+    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+    pointer-events: none;
+}
+
 .div-border{
     background-color: rgba(215,215, 215, 0.7) ;
     border-style:solid;

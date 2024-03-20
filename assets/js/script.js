@@ -215,6 +215,26 @@ function displaySkills(){
         `
     }
 }
+// Character Page
+
+function displayRefImage(origin){
+    picture = document.getElementById("reference-image")
+    if (origin == "Blank"){
+        picture.innerHTML = ``
+    }else if (origin == "dweller"){
+        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-dweller.jpeg" width="300px">`
+    }else if (origin == "wastelander"){
+        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-wastelander.jpeg" width="300px">`
+    }else if (origin == "twisted"){
+        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-twisted.jpeg" width="300px">`
+    }else if (origin == "altered"){
+        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-altered.jpeg" width="300px">`
+    }else if (origin == "enhanced"){
+        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-enhanced.jpeg" width="300px">`
+    }
+}
+
+
 
 // ****Code that runs when the DOM loads****
 //This function gets the event objects and displays each event as a individual div
