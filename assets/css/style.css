@@ -62,13 +62,17 @@ nav{
 opacity: 0;
 transform: translateY(-25px);
 transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+pointer-events: none;
 }
 
 .dropdown-animation-active{
     opacity: 1;
     transform: translateY(0px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    pointer-events: all
 }
+
+
 
 #nav-menu{
     width: 20%;
@@ -86,7 +90,7 @@ transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
     background-color: brown;
     padding: .75rem;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
-    z-index: 0;
+z-index: 0;
 }
 
 /* This section of for styles that happen on individual Pages */
