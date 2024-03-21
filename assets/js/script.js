@@ -1,3 +1,29 @@
+// ****Code that runs when the DOM loads****
+//This function gets the event objects and displays each event as a individual div
+document.addEventListener("DOMContentLoaded", function displayEvents(){
+    for (const event in events) {
+        document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"> 
+        ${events[event].eventDate} - ${events[event].eventName}<br>
+        ${events[event].eventLocation}
+         </div>`
+        }
+    }
+)
+// This code pre populates the header-event-details div with event 0
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById('event-details').innerHTML = `${events[0].eventInfo}`
+})
+
+// document.addEventListener("DOMContentLoaded", function addFormStyles(){
+//     let headStyles = document.getElementsByTagName("head")
+//     headStyles.innerHTML ="<style>"
+//     for(let skill in skills){
+//         headStyles.innerHTML += `
+//         #checkbox-${skills[skill].name}:checked~#selected-${skills[skill].name}{
+//             display: block; 
+//         }`}
+//         headStyles.innerHTML += "</style>"
+//     })
 
 /* This creats the event objects which are used on every page, They are designed to be updated
 once a year with each event for that year being it's own object.
@@ -43,7 +69,7 @@ let skills =[
         description: "Placeholder text"
     },
     {
-        name: "computer-use",
+        name: "computer",
         cost: 1,
         type: ["Mental"],
         restrictions: "N/A",
@@ -248,34 +274,28 @@ function formFetchSkills(){
         IconPlaceholder
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <h4>${skills[skill].cost}</h4></label>
-        <input type="checkbox" name="${skills[skill].name}" id="checkbox-">
+        <input type="checkbox" name="${skills[skill].name}" id="checkbox-${skills[skill].name}" onclick="displaySkill('${skills[skill].name}')">
         </input>
         </span>`
     }
     selectedSkillList.innerHTML = ""
     // Need to add object properties to pop different classes based on positive/negative value
     for (let skill in skills){
-        selectedSkillList.innerHTML += `<span class="form-skill-selection ${"Positive/Negative/Neutral"}" id="selected-${skills[skill].name}">
+        selectedSkillList.innerHTML += `<span class="form-skill-unselected ${"Positive/Negative/Neutral"}" id="selected-${skills[skill].name}">
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <p>${skills[skill].description}</p>
-        </span>
-        <style> #checkbox-${skills[skill].name}:checked~#selected-${skills[skill].name}{display: block; }</style>`
+        </span>`
     }
 
 }
 
-// ****Code that runs when the DOM loads****
-//This function gets the event objects and displays each event as a individual div
-document.addEventListener("DOMContentLoaded", function displayEvents(){
-    for (const event in events) {
-        document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"> 
-        ${events[event].eventDate} - ${events[event].eventName}<br>
-        ${events[event].eventLocation}
-         </div>`
-        }
+function displaySkill(skill){
+    let skillCheckbox = document.getElementById("checkbox-"+skill)
+    let selectedSkillDisplay = document.getElementById("selected-"+skill)
+    console.log(skillCheckbox)
+    if(skillCheckbox.checked){
+        selectedSkillDisplay.classList.add("form-skill-selected")
+    }else{
+        selectedSkillDisplay.classList.remove("form-skill-selected")
     }
-)
-// This code pre populates the header-event-details div with event 0
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById('event-details').innerHTML = `${events[0].eventInfo}`
-})
+}

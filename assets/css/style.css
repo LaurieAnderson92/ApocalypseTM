@@ -129,9 +129,13 @@ z-index: 0;
     padding: 1rem;
 }
 
-.form-skill-selection{
+.form-skill-unselected{
     display: none;
 }
+.form-skill-selected{
+    display: block;
+}
+
 
 /* Events */
 .event-group{
