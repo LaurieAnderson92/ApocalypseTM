@@ -293,11 +293,10 @@ function displaySkills(){
 }
 // Character Page
 /**
- * This function displays a character image based off the origin
+ * This function displays a character image based off the origin, along with default origin skills
  */
 function displayRefImage(origin){
     picture = document.getElementById("reference-image")
-    skillPointsAvailable = document.getElementById("skill-points-remaining")
     if (origin == "Blank"){
         picture.innerHTML = ``
     }else if (origin == "dweller"){
@@ -340,13 +339,19 @@ function formFetchSkills(){
 
 }
 
-function displaySkill(skill){
-    let skillCheckbox = document.getElementById("checkbox-"+skill)
-    let selectedSkillDisplay = document.getElementById("selected-"+skill)
-    console.log(skillCheckbox)
+function displaySkill(skillName){
+    let skillCheckbox = document.getElementById("checkbox-"+skillName)
+    let selectedSkillDisplay = document.getElementById("selected-"+skillName)
+    
+    let skillObject = skills.find(skill => skill.name === skillName);
+    let skillCost = skillObject
+
+    let skillPointsAvailable = document.getElementById("skill-points-remaining")
     if(skillCheckbox.checked){
         selectedSkillDisplay.classList.add("form-skill-selected")
+        skillPointsAvailable.innerHTML = skillPointsAvailable.innerHTML + skillCost
     }else{
         selectedSkillDisplay.classList.remove("form-skill-selected")
+        skillPointsAvailable.innerHTML = skillPointsAvailable.innerHTML - skillCost
     }
 }
