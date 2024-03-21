@@ -46,48 +46,98 @@ let events = [
     eventInfo: "Placeholder for description of Event 3"}
     ];
 
+/**
+ * You can add skills by using the below template and adding it to the array
+ * {
+        name: "SKILLNAME",
+        icon: 'FONTAWESOME ICON',
+        cost: COST,
+        type: ["SKILL TAGS AS ITEMS"],
+        restrictions: "SKILL RESTICTIONS",
+        description: "SKILL DESCRIPTION"
+    }
+ * 
+ */
 let skills =[
     {
         name: "strength",
-        cost: 1,
-        type: ["Physical"],
+        icon: '<i class="fa-solid fa-dumbbell"></i>',
+        cost: 2,
+        type: ["physical"],
         restrictions: "N/A",
-        description: "Placeholder text"
+        description: "You call double when wielding a blunt weapon and can move while carying a heavy armament alone at a walking pace."
+    },
+    {
+        name: "finesse",
+        icon: '<i class="fa-solid fa-bolt"></i>',
+        cost: 2,
+        type: ["physical"],
+        restrictions: "N/A",
+        description: "You call double when wielding a sharp weapon and can move over around or over a hazard at a walking pace."
     },
     {
         name: "willpower",
-        cost: 1,
-        type: ["Mental", "Social"],
+        icon: '<i class="fa-solid fa-brain"></i>',
+        cost: 3,
+        type: ["mental"],
         restrictions: "N/A",
-        description: "Placeholder text"
+        description: "detrimental mental effects you suffer are reduced"
     },
     {
-        name: "endurance",
-        cost: 1,
-        type: ["Physical"],
+        name: "feeble",
+        icon: '<i class="fa-solid fa-minimize"></i>',
+        cost: -3,
+        type: ["mental"],
         restrictions: "N/A",
-        description: "Placeholder text"
+        description: "detrimental mental effects you suffer are enhanced"
     },
     {
-        name: "computer",
+        name: "tough",
+        icon: '<i class="fa-solid fa-heart"></i>',
         cost: 1,
-        type: ["Mental"],
+        type: ["physical"],
         restrictions: "N/A",
-        description: "Placeholder text"
+        description: "You gain an extra two hits"
     },
     {
-        name: "scavange",
-        cost: 1,
-        type: ["Physical"],
+        name: "fragile",
+        icon: '<i class="fa-solid fa-heart-crack"></i>',
+        cost: -1,
+        type: ["physical"],
         restrictions: "N/A",
-        description: "Placeholder text"
+        description: "You have two less hits"
     },
     {
-        name: "medical-use",
-        cost: 1,
-        type: ["Mental"],
+        name: "second-chance",
+        icon: '<i class="fa-solid fa-shield"></i>',
+        cost: 4,
+        type: ["physical"],
         restrictions: "N/A",
-        description: "Placeholder text"
+        description: "Once per event, if your character were to become terminal, you can instead get back up at 1 hp, or return to the camp later with a tarumatic wound. Speak to the ref leading this mission when using this ability as the latter may not be possible"
+    },
+    {
+        name: "computer-knowledge",
+        icon: '<i class="fa-solid fa-code"></i>',
+        cost: 1,
+        type: ["mental"],
+        restrictions: "N/A",
+        description: "You have advantage when resolving a clash that involves eletronics"
+    },
+    {
+        name: "technical-knowledge",
+        icon: '<i class="fa-solid fa-wrench"></i>',
+        cost: 1,
+        type: ["physical"],
+        restrictions: "N/A",
+        description: "You have advantage when resolving a clash that involves tools"
+    },
+    {
+        name: "medical-knowledge",
+        icon: '<i class="fa-solid fa-kit-medical"></i>',
+        cost: 2,
+        type: ["mental"],
+        restrictions: "N/A",
+        description: "You have advantage when resolving a clash that involves medical pratices"
     }
 ]
 
@@ -247,6 +297,7 @@ function displaySkills(){
  */
 function displayRefImage(origin){
     picture = document.getElementById("reference-image")
+    skillPointsAvailable = document.getElementById("skill-points-remaining")
     if (origin == "Blank"){
         picture.innerHTML = ``
     }else if (origin == "dweller"){
@@ -271,7 +322,7 @@ function formFetchSkills(){
     for (let skill in skills){ 
         skillList.innerHTML += `<span class="form-skill-options">
         <label for="checkbox-${skills[skill].name}">
-        IconPlaceholder
+        ${skills[skill].icon}
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <h4>${skills[skill].cost}</h4></label>
         <input type="checkbox" name="${skills[skill].name}" id="checkbox-${skills[skill].name}" onclick="displaySkill('${skills[skill].name}')">
