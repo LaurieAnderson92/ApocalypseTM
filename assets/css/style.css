@@ -65,10 +65,10 @@ nav{
 }
 /* acts as the starting point for the dropdown animation "openDropdown" Function */
 .dropdown-animation{
-opacity: 0;
-transform: translateY(-25px);
-transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
-pointer-events: none;
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+    pointer-events: none;
 }
 
 .dropdown-animation-active{
@@ -129,6 +129,12 @@ z-index: 0;
     padding: 1rem;
 }
 
+#reference-image > img{
+    max-width: calc(320px - 6rem);
+    width: 80vw;
+}
+
+/* This is the toggle for the skills as they are selected, try adding an animation */
 .form-skill-unselected{
     display: none;
 }
