@@ -344,14 +344,14 @@ function displaySkill(skillName){
     let selectedSkillDisplay = document.getElementById("selected-"+skillName)
     
     let skillObject = skills.find(skill => skill.name === skillName);
-    let skillCost = skillObject
+    let skillCost = skillObject.cost
 
-    let skillPointsAvailable = document.getElementById("skill-points-remaining")
+    let skillPointsAvailable = parseInt(document.getElementById("skill-points-remaining").innerText)
     if(skillCheckbox.checked){
         selectedSkillDisplay.classList.add("form-skill-selected")
-        skillPointsAvailable.innerHTML = skillPointsAvailable.innerHTML + skillCost
+        document.getElementById("skill-points-remaining").innerText = skillPointsAvailable - skillCost
     }else{
         selectedSkillDisplay.classList.remove("form-skill-selected")
-        skillPointsAvailable.innerHTML = skillPointsAvailable.innerHTML - skillCost
+        document.getElementById("skill-points-remaining").innerText = skillPointsAvailable + skillCost
     }
 }
