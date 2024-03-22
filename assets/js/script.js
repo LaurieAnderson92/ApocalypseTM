@@ -349,8 +349,16 @@ function displaySkill(skillName){
 
     let skillPointsAvailable = parseInt(document.getElementById("skill-points-remaining").innerText)
     if(skillCheckbox.checked){
-        selectedSkillDisplay.classList.add("form-skill-selected")
-        document.getElementById("skill-points-remaining").innerText = skillPointsAvailable - skillCost
+        if (skillPointsAvailable - skillCost >= 0) {
+            selectedSkillDisplay.classList.add("form-skill-selected")
+            document.getElementById("skill-points-remaining").innerText = skillPointsAvailable - skillCost
+            return
+        } else {
+            skillCheckbox.checked = false
+            alert ("You do not have enough Skill points to purchase this skill")
+            return
+        }
+        
     }else{
         selectedSkillDisplay.classList.remove("form-skill-selected")
         document.getElementById("skill-points-remaining").innerText = skillPointsAvailable + skillCost
