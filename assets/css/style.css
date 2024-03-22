@@ -50,12 +50,15 @@
 }
 #bannertwo{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;
+    display: none;
 }
 #bannerthree{
     background: url(../../assets/images/banner-thames.jpeg) center/cover;
+    display: none;
 }
 #bannerfour{
     background: url(../../assets/images/banner-westminster.jpeg) center/cover;
+    display: none;
 }
 
 /* Nav */
@@ -171,8 +174,11 @@ footer{
     position: sticky;
     bottom: 0vw;
     display: flex;
+    background-color: rgba(215,215, 215, 1) ;
+    align-items: center;
 }
 footer > p,i{
     text-align: center;
     vertical-align: middle;
+    align-items: center;
 }
