@@ -119,7 +119,8 @@ z-index: 0;
 .character-form{
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    justify-content: space-around;
+    margin: 0.25rem;
 }
 
 .form-group{
@@ -127,6 +128,20 @@ z-index: 0;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 1rem;
+}
+.form-skill-options{
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+#form-characterskills{
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 0.25rem;
 }
 
 #reference-image > img{
