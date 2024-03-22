@@ -136,6 +136,9 @@ z-index: 0;
     text-align: center;
     flex-grow: 1;
 }
+.form-sill-options input{
+    visibility: hidden;
+}
 
 
 #form-characterskills{

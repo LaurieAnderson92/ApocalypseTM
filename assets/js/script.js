@@ -108,7 +108,7 @@ let skills =[
         description: "You have two less hits"
     },
     {
-        name: "second-chance",
+        name: "resiliance",
         icon: '<i class="fa-solid fa-shield"></i>',
         cost: 4,
         type: ["physical"],
@@ -116,7 +116,7 @@ let skills =[
         description: "Once per event, if your character were to become terminal, you can instead get back up at 1 hp, or return to the camp later with a tarumatic wound. Speak to the ref leading this mission when using this ability as the latter may not be possible"
     },
     {
-        name: "computer-knowledge",
+        name: "computer-use",
         icon: '<i class="fa-solid fa-code"></i>',
         cost: 1,
         type: ["mental"],
@@ -124,7 +124,7 @@ let skills =[
         description: "You have advantage when resolving a clash that involves eletronics"
     },
     {
-        name: "technical-knowledge",
+        name: "technical-use",
         icon: '<i class="fa-solid fa-wrench"></i>',
         cost: 1,
         type: ["physical"],
@@ -132,7 +132,7 @@ let skills =[
         description: "You have advantage when resolving a clash that involves tools"
     },
     {
-        name: "medical-knowledge",
+        name: "medical-use",
         icon: '<i class="fa-solid fa-kit-medical"></i>',
         cost: 2,
         type: ["mental"],
@@ -325,7 +325,7 @@ function formFetchSkills(){
         ${skills[skill].icon}
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <h4>${skills[skill].cost}</h4></label>
-        <input type="checkbox" name="${skills[skill].name}" id="checkbox-${skills[skill].name}" onclick="displaySkill('${skills[skill].name}')">
+        <input type="checkbox" hidden name="${skills[skill].name}" id="checkbox-${skills[skill].name}" onclick="displaySkill('${skills[skill].name}')">
         </input>
         </span>`
     }
