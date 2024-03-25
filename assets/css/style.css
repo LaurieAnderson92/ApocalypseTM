@@ -4,6 +4,12 @@
     margin: 0;
     box-sizing:border-box;
 }
+
+/* Google maps */
+gmp-map {
+    height: 100%;
+  }
+
 /* Global styles */
 .hidden{
     display: none;

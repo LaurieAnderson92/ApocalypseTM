@@ -14,17 +14,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('event-details').innerHTML = `${events[0].eventInfo}`
 })
 
-// document.addEventListener("DOMContentLoaded", function addFormStyles(){
-//     let headStyles = document.getElementsByTagName("head")
-//     headStyles.innerHTML ="<style>"
-//     for(let skill in skills){
-//         headStyles.innerHTML += `
-//         #checkbox-${skills[skill].name}:checked~#selected-${skills[skill].name}{
-//             display: block; 
-//         }`}
-//         headStyles.innerHTML += "</style>"
-//     })
-
 /* This creats the event objects which are used on every page, They are designed to be updated
 once a year with each event for that year being it's own object.
 */
@@ -145,7 +134,8 @@ let skills =[
 
 // displays event Info on every page when user clicks on the event
 function displayEventInfo(event){
-    document.getElementById('event-details').innerHTML = `${events[event].eventInfo}`
+    document.getElementById('event-details').innerHTML = 
+    `${events[event].eventInfo}`
 }
 
 /**

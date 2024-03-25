@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apocalypse&#8482;</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- This is the callout for fontawesome -->
     <script src="https://kit.fontawesome.com/38fef1e39a.js" crossorigin="anonymous"></script>
+    <!-- This is the Callout for Google Maps -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ZE5hlzGtCZlei-2XdUS9z2t9Q09lQjs&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+    <style>
+        gmp-map {
+          height: 100%;
+        }
+  
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
 </head>
 <body>
     <!-- The header of the website on every page -->
@@ -59,6 +76,9 @@
             <div id="event-infomation" class=""></div>
             <!-- This is the landing zone for where the details for the event will appear when the above divs are clicked -->
             <p id="event-details" class="div-border"></p>
+            <gmp-map center="50.3661994934082,-4.486026287078857" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="50.3661994934082,-4.486026287078857" title="My location"></gmp-advanced-marker>
+            </gmp-map>
         </div>
     </section>
     <footer>
