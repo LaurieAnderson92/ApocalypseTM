@@ -293,23 +293,29 @@ function displaySkills(){
 }
 // Character Page
 /**
- * This function displays a character image based off the origin, along with default origin skills
+ * This function displays a character image based off the origin, along with default origin skills and sets the available skill points
  */
-function displayRefImage(origin){
+function displayOrigin(origin){
     picture = document.getElementById("reference-image")
     if (origin == "Blank"){
         picture.innerHTML = ``
+        document.getElementById("skill-points-remaining").innerText = 6
         //Need to add alt Text
     }else if (origin == "dweller"){
         picture.innerHTML = `<img class="drop-animation" src="assets/images/character-dweller.jpeg">`
+        document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "wastelander"){
         picture.innerHTML = `<img class="drop-animation" src="assets/images/character-wastelander.jpeg" >`
+        document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "twisted"){
         picture.innerHTML = `<img class="drop-animation" src="assets/images/character-twisted.jpeg">`
+        document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "altered"){
         picture.innerHTML = `<img class="drop-animation" src="assets/images/character-altered.jpeg">`
+        document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "enhanced"){
         picture.innerHTML = `<img class="drop-animation" src="assets/images/character-enhanced.jpeg">`
+        document.getElementById("skill-points-remaining").innerText = 6
     }
 }
 /**
@@ -320,14 +326,14 @@ function formFetchSkills(){
     let selectedSkillList = document.getElementById("character-skilllist")
     skillList.innerHTML = ""
     for (let skill in skills){ 
-        skillList.innerHTML += `<span class="form-skill-options">
-        <label for="checkbox-${skills[skill].name}">
+        skillList.innerHTML += ` <label for="checkbox-${skills[skill].name}">
+        <span class="form-skill-options">
         ${skills[skill].icon}
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
-        <h4>${skills[skill].cost}</h4></label>
+        <h4>${skills[skill].cost}</h4>
         <input type="checkbox" hidden name="${skills[skill].name}" id="checkbox-${skills[skill].name}" onclick="displaySkill('${skills[skill].name}')">
         </input>
-        </span>`
+        </span></label>`
     }
     selectedSkillList.innerHTML = ""
     // Need to add object properties to pop different classes based on positive/negative value
