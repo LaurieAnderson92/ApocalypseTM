@@ -19,20 +19,28 @@ once a year with each event for that year being it's own object.
 */
 let events = [
     // Below is the details for event 1
-    {eventName: "London Has Fallen",
+    {eventName: "Lundon Has Fallen",
     eventDate: "June 18th",
     eventLocation: "Morgan Camping Site",
-    eventInfo: "Placeholder for description of Event 1"},
+    eventInfo: `The ring of fortresses surrounding the fallen city of Lundon has been breached. <br> 
+                The corrupted that were once contained in the old tunnels now poor out and flood the realm. 
+                As chaos spills out into the land, a council convenes to deliberate the fate of their 
+                embattled realm.`},
     // Below is the details for event 2
     {eventName: "The Lost Bunker",
-    eventDate: "TBD",
-    eventLocation: "TBD",
-    eventInfo: "Placeholder for description of Event 2"},
+    eventDate: "July 31st",
+    eventLocation: "Morgan Camping Site",
+    eventInfo: `With a remnant of the old world scattered amidst the ruins, and the shadow of the twisted 
+                spreading ever wider, the council must grapple with the urgent question of how to stem 
+                the tide of darkness threatening to engulf their world.`},
     // Below is the details for event 3
-    {eventName: "Siege of the Golden Arches",
-    eventDate: "TBD",
-    eventLocation: "TBD",
-    eventInfo: "Placeholder for description of Event 3"}
+    {eventName: "fool's hope",
+    eventDate: "September 30th",
+    eventLocation: "Morgan Camping Site",
+    eventInfo: `With the remnants of Lundon's defenses shattered and the world teetering on the brink, 
+                courageous souls must navigate treacherous terrain, face unimaginable perils, and confront 
+                the darkest depths of their own fears. For in a world where hope flickers dim, it is the Fool 
+                who carries the burden of kindling its flame anew.`}
     ];
 
 /**
