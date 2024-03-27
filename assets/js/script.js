@@ -130,6 +130,28 @@ let skills =[
     }
 ]
 
+let originSkills = [
+    {
+        name: "conductive",
+        icon: "NON",
+        origin: "enhanced",
+        cost: -1,
+        type: ["origin"],
+        restrictions: "Mandatory for characters with the Origin: Enhanced",
+        description: "It is a technical check, rather than a medical check, to perform the healing action and you receive no mefit from healing plants or magic"
+    },
+    {
+        name: "old",
+        icon: "NON",
+        origin: "enhanced",
+        cost: 2,
+        type: ["origin"],
+        restrictions: "Mandatory for characters with the Origin: Enhanced",
+        description: "You are immune to any effect that puts you to sleep or that would alter your form. You also suffer no averse effects to traverse through radioactive eviroments without protection"
+    }
+]
+
+
 //Code that runs on a click on the DOM
 
 // displays event Info on every page when user clicks on the event
@@ -267,6 +289,7 @@ function displayGameRules(){
     `
 }
 // Displays the Rules when click
+// ToDo: Add a for lop to only display restrictions when a value is present
 function displaySkills(){
     rulesSection.innerHTML =`<h2>Skills</h3>
                             <br>`
@@ -276,6 +299,18 @@ function displaySkills(){
             <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3><h3>${skills[skill].cost}</h3></span>
             <p><b>Restrictions:</b> ${skills[skill].restrictions}</p>
             <p>${skills[skill].description}</p>
+        </div>
+        <br>
+        `
+    }
+    rulesSection.innerHTML +=`<h2>Origin Skills</h3>
+                            <br>`
+    for (const skill in originSkills){
+        rulesSection.innerHTML += `
+        <div id=${originSkills[skill].name} class="skill-box">
+            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
+            <p><b>Restrictions:</b> ${originSkills[skill].restrictions}</p>
+            <p>${originSkills[skill].description}</p>
         </div>
         <br>
         `
