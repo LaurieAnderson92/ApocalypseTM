@@ -118,6 +118,11 @@ I then like to add a screenshot of each page of the site here, i use [amirespons
 
 What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
 
+### Colour Scheme
+https://coolors.co/69b536-dcd8cc-8f8570-a19729-3a342b
+
+![color palette](assets/documentation/colour-palette.png)
+
 ### Accessibility
 
 Be an amazing developer and get used to thinking about accessibility in all of your projects!
@@ -138,7 +143,7 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 
 - HTML5
 - CSS
--JavaScript
+- JavaScript
 
 ### Frameworks, Libraries & Programs Used
 
@@ -147,6 +152,11 @@ Add any frameworks, libraries or programs used while creating your project.
 Make sure to include things like git, GitHub, the program used to make your wireframes, any programs used to compress your images, did you use a CSS framework like Bootstrap? If so add it here (add the version used).
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
+
+- git
+- Github
+- Balsamiq
+- Googlemaps API
 
 ## Deployment & Local Development
 
