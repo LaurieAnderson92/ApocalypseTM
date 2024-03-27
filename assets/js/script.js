@@ -127,30 +127,36 @@ let skills =[
         type: ["mental"],
         restrictions: "N/A",
         description: "You have advantage when resolving a clash that involves medical pratices"
-    }
-]
-
-let originSkills = [
+    },
     {
         name: "conductive",
         icon: "NON",
-        origin: "enhanced",
         cost: -1,
-        type: ["origin"],
+        origin: "enhanced",
+        type: ["physical"],
         restrictions: "Mandatory for characters with the Origin: Enhanced",
         description: "It is a technical check, rather than a medical check, to perform the healing action and you receive no mefit from healing plants or magic"
     },
     {
         name: "old",
         icon: "NON",
-        origin: "enhanced",
         cost: 2,
-        type: ["origin"],
+        origin: "enhanced",
+        type: ["physical"],
         restrictions: "Mandatory for characters with the Origin: Enhanced",
         description: "You are immune to any effect that puts you to sleep or that would alter your form. You also suffer no averse effects to traverse through radioactive eviroments without protection"
     }
 ]
 
+let originSkills = skills.filter(function(skill) {
+    let skillIncludesOrigin = Object.keys(skill).includes('origin')
+    return skillIncludesOrigin
+    })
+
+let generalSkills = skills.filter(function(skill) {
+    let skillIncludesOrigin = Object.keys(skill).includes('origin')
+    return !skillIncludesOrigin
+        })
 
 //Code that runs on a click on the DOM
 
@@ -303,18 +309,6 @@ function displaySkills(){
         <br>
         `
     }
-    rulesSection.innerHTML +=`<h2>Origin Skills</h3>
-                            <br>`
-    for (const skill in originSkills){
-        rulesSection.innerHTML += `
-        <div id=${originSkills[skill].name} class="skill-box">
-            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
-            <p><b>Restrictions:</b> ${originSkills[skill].restrictions}</p>
-            <p>${originSkills[skill].description}</p>
-        </div>
-        <br>
-        `
-    }
 }
 // Character Page
 /**
@@ -322,6 +316,8 @@ function displaySkills(){
  */
 function displayOrigin(origin){
     picture = document.getElementById("reference-image")
+    let skillPointsAvailable = parseInt(document.getElementById("skill-points-remaining").innerText)
+    
     if (origin == "Blank"){
         picture.innerHTML = ``
         document.getElementById("skill-points-remaining").innerText = 6
@@ -343,6 +339,19 @@ function displayOrigin(origin){
         document.getElementById("skill-points-remaining").innerText = 6
     }
 }
+
+function displayOriginSkills(origin){
+    let originSkills = document.getElementsByClassName(origin)
+    let skillPointsAvailable = parseInt(document.getElementById("skill-points-remaining").innerText)
+    for (let skill in originSkills) {
+        let skillName = originSkills[skill].id.slice(9)
+        let skillObject = skills.find(skill => skill.name === skillName);
+        if (originSkills[skill].classList = origin) {
+            originSkills[skill].classList.add("form-skill-selected")
+            document.getElementById("skill-points-remaining").innerText = skillPointsAvailable - skillObject.cost
+        }
+    }
+}
 /**
  * This function fetches all the skills in the object array and returns them as booleans for a HTML form
  */
@@ -350,7 +359,7 @@ function formFetchSkills(){
     let skillList = document.getElementById("form-characterskills")
     let selectedSkillList = document.getElementById("character-skilllist")
     skillList.innerHTML = ""
-    for (let skill in skills){ 
+    for (let skill in generalSkills){ 
         skillList.innerHTML += ` <label for="checkbox-${skills[skill].name}">
         <span class="form-skill-options">
         ${skills[skill].icon}
@@ -363,7 +372,7 @@ function formFetchSkills(){
     selectedSkillList.innerHTML = ""
     // Need to add object properties to pop different classes based on positive/negative value
     for (let skill in skills){
-        selectedSkillList.innerHTML += `<span class="form-skill-unselected ${"Positive/Negative/Neutral"}" id="selected-${skills[skill].name}">
+        selectedSkillList.innerHTML += `<span class="form-skill-unselected ${"Positive/Negative/Neutral"} ${skills[skill].origin}" id="selected-${skills[skill].name}">
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <p>${skills[skill].description}</p>
         </span>`
@@ -371,6 +380,11 @@ function formFetchSkills(){
 
 }
 
+/**
+ * This funtion is called when a skill checkbox is clicked checks the cost of the skill against the current total. it 
+ * adds a class containing visible styles to the div with the ID of the skill as well as subtracting the total from 
+ * the skill point total.
+ */
 function displaySkill(skillName){
     let skillCheckbox = document.getElementById("checkbox-"+skillName)
     let selectedSkillDisplay = document.getElementById("selected-"+skillName)
@@ -389,7 +403,6 @@ function displaySkill(skillName){
             alert ("You do not have enough Skill points to purchase this skill")
             return
         }
-        
     }else{
         selectedSkillDisplay.classList.remove("form-skill-selected")
         document.getElementById("skill-points-remaining").innerText = skillPointsAvailable + skillCost
