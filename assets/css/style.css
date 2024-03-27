@@ -5,11 +5,6 @@
     box-sizing:border-box;
 }
 
-/* Google maps */
-gmp-map {
-    height: 100%;
-  }
-
 /* Global styles */
 .hidden{
     display: none;
@@ -138,6 +133,7 @@ z-index: 0;
     flex-wrap: wrap;
     padding: 1rem;
 }
+
 .form-skill-options{
     border: 1px;
     border-color: black;
@@ -145,10 +141,10 @@ z-index: 0;
     text-align: center;
     flex-grow: 1;
 }
+
 .form-sill-options input{
     visibility: hidden;
 }
-
 
 #form-characterskills{
     align-content: space-between;
