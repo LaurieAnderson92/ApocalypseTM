@@ -6,6 +6,19 @@
 }
 
 /* Global styles */
+body{
+    background-color: #DCD8CC;
+}
+
+h1{
+    color: #CABC25;
+    text-shadow: 1px 1px #3A342B;
+}
+
+p,h2,h3{
+    color: #3A342B;
+}
+
 .hidden{
     display: none;
 }
