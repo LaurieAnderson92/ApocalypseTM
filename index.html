@@ -10,6 +10,20 @@
     <!-- This is the Callout for Google Maps -->
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ZE5hlzGtCZlei-2XdUS9z2t9Q09lQjs&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
+    <script>
+        let map;
+
+        async function initMap() {
+        const { Map } = await google.maps.importLibrary("maps");
+
+        map = new Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+  });
+}
+
+initMap();
+    </script>
     <style>
         gmp-map {
           height: 100%;

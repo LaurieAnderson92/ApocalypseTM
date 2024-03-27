@@ -15,18 +15,18 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 // Script to load a map in google maps
-let map;
+// let map;
 
-async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
+// async function initMap() {
+//   const { Map } = await google.maps.importLibrary("maps");
 
-  map = new Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
+//   map = new Map(document.getElementById("map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
+// }
 
-initMap();
+// initMap();
 
 /* This creats the event objects which are used on every page, They are designed to be updated
 once a year with each event for that year being it's own object.
