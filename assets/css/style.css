@@ -162,7 +162,17 @@ nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 0.5rem;
+}
+
+.form-input{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input[type="text"],[type="email"]{
+    width: 175px;
 }
 
 .form-skill-options{
@@ -172,10 +182,28 @@ nav{
     text-align: center;
     flex-grow: 1;
 }
-
-.form-sill-options input{
-    visibility: hidden;
+#form-origin{
+    display: flex;
+    justify-content: space-around;
 }
+
+#form-origindetails{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    left: 0px;
+}
+
+#skill-points{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .form-sill-options input{
+    visibility: hidden;
+} */
 
 #form-characterskills{
     align-content: space-between;

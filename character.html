@@ -43,34 +43,42 @@
             
             <!-- Name input-->
             <div class="form-group" id="form-playerdetails">
-                <span>
-                    <label class="form-label" for="playername">Player Name</label>  
+                <span class="form-input">
+                    <label class="form-label" for="playername"><p>Player Name</p></label>  
                     <input id="player-name" name="playername" type="text" placeholder="" class="form-control" required>
                 </span>
-                <span>
-                    <label class="form-label" for="character-name">Character Name</label>  
+                <hr>
+                <span class="form-input">
+                    <label class="form-label" for="character-name"><p>Character Name</p></label>  
                     <input id="character-name" name="character-name" type="text" placeholder="" class="form-control" required>
                 </span>
-                <span>
-                    <label class="form-label" for="player-email">Email Address</label>  
+                <hr>
+                <span class="form-input">
+                    <label class="form-label" for="player-email"><p>Email Address</p></label>  
                     <input id="player-email" name="player-email" type="email" placeholder="" class="form-control" required>
-                </span>    
+                </span>
+                <hr>    
             </div>
             
             <!-- Skills input -->
-            <div class="form-group" id="form-origindetails">
-                <label class="form-label" for="character-origin">Origin</label>
-                <select id="character-origin" name="character-origin" class="form-control" onchange="displayOrigin(this.value), formFetchSkills(), displayOriginSkills(this.value)" required>
-                    <option value="blank"></option>  
-                    <option value="dweller">Dweller</option>
-                    <option value="wastelander">Wastelander</option>
-                    <option value="twisted">Twisted</option>
-                    <option value="altered">Altered</option>
-                    <option value="enhanced">Enhanced</option>
-                </select>
-            <div class="form-group" id="form-characterskills">
-                
+            <div id="form-origin">
+                <div id="skill-points" class="form-group"><p>Skill Points:&nbsp</p><div id="skill-points-remaining">6</div></div>
+                <span class="form-group" id="form-origindetails">
+                    <label class="form-label" for="character-origin"><p>Origin</p></label>
+                    <select id="character-origin" name="character-origin" class="form-control" onchange="displayOrigin(this.value), formFetchSkills(), displayOriginSkills(this.value)" required>
+                        <option value="blank"></option>  
+                        <option value="dweller"><p>Dweller</p></option>
+                        <option value="wastelander"><p>Wastelander</p></option>
+                        <option value="twisted"><p>Twisted</p></option>
+                        <option value="altered"><p>Altered</p></option>
+                        <option value="enhanced"><p>Enhanced</p></option>
+                    </select>
+                </span>
             </div>
+
+
+                <div class="form-group" id="form-characterskills">
+                <div id="character-skilllist" class="form-group"></div>
             
             <!-- Button (Double) -->
             <div class="form-group">
@@ -78,10 +86,8 @@
                 <button id="character-submit" name="character-submit" class="btn btn-success">Submit</button>
                 <button id="character-clear" name="character-clear" class="btn btn-clear">Clear</button>
             </div>
-            <div id="reference-image" class="form-group">Placeholder for image</div>
-            <div id="skill-points" class="form-group"><p>Remaining skill points:</p><div id="skill-points-remaining">6</div></div>
-            <div id="character-skilllist" class="form-group">Placeholder for skills</div>
             </fieldset>
+            <div id="reference-image" class="form-group">Placeholder for image</div>
         </form>
             
     </section>
