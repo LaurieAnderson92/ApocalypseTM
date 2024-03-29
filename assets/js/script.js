@@ -351,11 +351,11 @@ function displayOrigin(origin){
 function displayOriginSkills(origin){
     let originSkills = document.getElementsByClassName(origin)
     let skillPointsAvailable = parseInt(document.getElementById("skill-points-remaining").innerText)
-    for (let skill in originSkills) {
-        let skillName = originSkills[skill].id.slice(9)
-        let skillObject = skills.find(skill => skill.name === skillName);
-        if (originSkills[skill].classList = origin) {
-            originSkills[skill].classList.add("form-skill-selected")
+    for (let i = 0; i < originSkills.length; i++ ) {
+        let skillName = originSkills[i].id.slice(9)
+        let skillObject = skills.find(i => i.name === skillName);
+        if (originSkills[i].classList = origin) {
+            originSkills[i].classList.add("form-skill-selected")
             document.getElementById("skill-points-remaining").innerText = skillPointsAvailable - skillObject.cost
         }
     }
