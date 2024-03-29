@@ -179,13 +179,6 @@ input[type="text"],[type="email"]{
 
 .form-skill-options{
     text-align: center;
-    flex-grow: 1;
-    padding-left: 0rem;
-}
-.form-skill-options > *{
-    padding-left: 0rem;
-    min-width: 100px;
-    
 }
 
 #form-origin{
@@ -207,10 +200,6 @@ input[type="text"],[type="email"]{
     align-items: center;
 }
 
-/* .form-sill-options input{
-    visibility: hidden;
-} */
-
 #form-characterskills{
     display: flex;
     align-content: space-between;
@@ -219,11 +208,13 @@ input[type="text"],[type="email"]{
     
 }
 #form-characterskills > label{
+    padding-left: 0rem;
     flex-grow: 1;
     border-style: solid;
     border-color: #3A342B;
     border-width: 1px;
     max-width: 150px;
+    min-width: 100px;
 }
 
 #reference-image > img{
