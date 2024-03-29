@@ -216,10 +216,18 @@ input[type="text"],[type="email"]{
     max-width: 150px;
     min-width: 100px;
 }
+/* Reference image on the character sheet */
+#reference-image{
+    display: flex;
+    justify-content: center;
+}
 
 #reference-image > img{
     max-width: calc(320px - 6rem);
     width: 80vw;
+    position: relative;
+    top: 2rem;
+    border-radius: 8px;
 }
 
 /* This is the toggle for the skills as they are selected, try adding an animation */
