@@ -2,10 +2,10 @@
 //This function gets the event objects and displays each event as a individual div
 document.addEventListener("DOMContentLoaded", function displayEvents(){
     for (const event in events) {
-        document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"> 
+        document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"><p> 
         ${events[event].eventDate} - ${events[event].eventName}<br>
         ${events[event].eventLocation}
-         </div>`
+        </p></div>`
         }
     }
 )
