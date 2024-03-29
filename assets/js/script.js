@@ -370,7 +370,7 @@ function formFetchSkills(){
     for (let skill in generalSkills){ 
         skillList.innerHTML += ` <label for="checkbox-${skills[skill].name}">
         <span class="form-skill-options">
-        ${skills[skill].icon}
+        <p>${skills[skill].icon}</p>
         <h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3>
         <h4>${skills[skill].cost}</h4>
         <input type="checkbox" hidden name="${skills[skill].name}" id="checkbox-${skills[skill].name}" onclick="displaySkill('${skills[skill].name}')">
