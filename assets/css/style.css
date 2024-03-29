@@ -17,7 +17,7 @@ h1{
     font-family: "Cinzel", serif;
 }
 
-p,h2,h3{
+p,h2,h3,input,select{
     color: #3A342B;
     padding-left: 0.5rem;
     font-family: "Forum", sans-serif;
@@ -173,8 +173,10 @@ nav{
     justify-content: space-between;
 }
 
-input[type="text"],[type="email"]{
+input[type="text"],[type="email"],select{
     width: 175px;
+    height: 2rem;
+    background-color: #DCD8CC;
 }
 
 .form-skill-options{
@@ -215,6 +217,9 @@ input[type="text"],[type="email"]{
     border-width: 1px;
     max-width: 150px;
     min-width: 100px;
+}
+#form-characterskills > label:hover{
+    background-color: rgba(0, 0, 0, .3);
 }
 /* Reference image on the character sheet */
 #reference-image{
