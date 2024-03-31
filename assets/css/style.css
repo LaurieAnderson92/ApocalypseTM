@@ -222,9 +222,6 @@ input[type="text"],[type="email"],select{
     background-color: rgba(0, 0, 0, .3);
 }
 
-#form-characterskills > label:hover{
-    background-color: rgba(0, 0, 0, .3);
-}
 /* Reference image on the character sheet */
 #reference-image{
     display: flex;
