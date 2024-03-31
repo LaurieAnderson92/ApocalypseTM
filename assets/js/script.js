@@ -396,7 +396,8 @@ function formFetchSkills(){
 function displaySkill(skillName){
     let skillCheckbox = document.getElementById("checkbox-"+skillName)
     let selectedSkillDisplay = document.getElementById("selected-"+skillName)
-    
+    let skillLabel = skillCheckbox.closest("label")
+
     let skillObject = skills.find(skill => skill.name === skillName);
     let skillCost = skillObject.cost
 
@@ -404,6 +405,7 @@ function displaySkill(skillName){
     if(skillCheckbox.checked){
         if (skillPointsAvailable - skillCost >= 0) {
             selectedSkillDisplay.classList.add("form-skill-selected")
+            skillLabel.classList.add("skill-selected")
             document.getElementById("skill-points-remaining").innerText = skillPointsAvailable - skillCost
             return
         } else {
@@ -414,5 +416,6 @@ function displaySkill(skillName){
     }else{
         selectedSkillDisplay.classList.remove("form-skill-selected")
         document.getElementById("skill-points-remaining").innerText = skillPointsAvailable + skillCost
+        skillLabel.classList.remove("skill-selected")
     }
 }

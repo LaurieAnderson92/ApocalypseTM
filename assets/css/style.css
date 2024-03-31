@@ -218,6 +218,10 @@ input[type="text"],[type="email"],select{
     max-width: 150px;
     min-width: 100px;
 }
+.skill-selected{
+    background-color: rgba(0, 0, 0, .3);
+}
+
 #form-characterskills > label:hover{
     background-color: rgba(0, 0, 0, .3);
 }
