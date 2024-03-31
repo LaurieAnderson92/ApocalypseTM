@@ -42,6 +42,7 @@ a:hover {
 .hidden{
     display: none;
 }
+
 .drop-animation{
     transform: translateY(-25px);
     transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;

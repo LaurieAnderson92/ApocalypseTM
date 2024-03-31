@@ -14,6 +14,34 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('event-details').innerHTML = `${events[0].eventInfo}`
 })
 
+//This code prepopulates the skills section with all of the skills when the DOM is loaded, this it to assist with screenreaders
+document.addEventListener("DOMContentLoaded", function loadSkills(){
+    let skillRules = document.getElementById("skill-rules")
+    skillRules.innerHTML =`<h2>General Skills</h3>
+                            <br>`
+    for (const skill in generalSkills){
+        skillRules.innerHTML += `
+        <div id=${generalSkills[skill].name} class="skill-box">
+            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(generalSkills[skill].name))}</h3><h3>${generalSkills[skill].cost}</h3></span>
+            <p>${generalSkills[skill].description}</p>
+        </div>
+        <br>
+        `
+    }
+    skillRules.innerHTML +=`<h2>Origin Skills</h3>
+                            <br>`
+    for (const skill in originSkills){
+        skillRules.innerHTML += `
+        <div id=${originSkills[skill].name} class="skill-box">
+            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
+            <h3>Origin: ${originSkills[skill].origin}</h3> 
+            <p>${originSkills[skill].description}</p>
+        </div>
+        <br>
+        `
+    }
+})
+
 /* This creats the event objects which are used on every page, They are designed to be updated
 once a year with each event for that year being it's own object.
 */
@@ -197,7 +225,6 @@ document.addEventListener("click", function closeDropdownOnClick(event){
         }
 })
 // ****Rules Page****
-let rulesSection = document.getElementById("rules-display")
 /**
  * This function takes a string and returns the same string with a capitalized first letter
  */
@@ -207,125 +234,48 @@ function capitalizeFirstLetter(string){
 function replaceDashesWithSpaces(string){
     return string.replace('-', ' ')
 }
+/**
+ * Displays the condut rules and hides game rules and skill rules
+ */
 function displayConductRules(){
-    rulesSection.innerHTML =`<h2>Game Rules</h2>
-                            <br>`
-    rulesSection.innerHTML += `<h3>Be nice</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Don't be a Dick</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Refs are gods</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Don't ever ask about Ref's Gunpowder</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Children at the event</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Bees?</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Leveling Up</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    `
+    let gameRules = document.getElementById("game-rules")
+    let conductRules = document.getElementById("conduct-rules")
+    let skillRules = document.getElementById("skill-rules")
+    conductRules.classList.remove("hidden")    
+    gameRules.classList.add("hidden")
+    skillRules.classList.add("hidden")
 }
+
+/**
+ * Displays the game rules and hides conduct rules and skill rules
+ */
 function displayGameRules(){
-    console.log("click")
-    rulesSection.innerHTML =`<h2>Game Rules</h2>
-                            <br>`
-    rulesSection.innerHTML += `<h3>Combat</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Monstering</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Resolving A Clash</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Skill Challange</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Luck Points</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Downtime</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h3>Leveling Up</h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    `
+    let gameRules = document.getElementById("game-rules")
+    let conductRules = document.getElementById("conduct-rules")
+    let skillRules = document.getElementById("skill-rules")
+    gameRules.classList.remove("hidden")
+    conductRules.classList.add("hidden")
+    skillRules.classList.add("hidden")
 }
-// Displays the Rules when click
-// ToDo: Add a for lop to only display restrictions when a value is present
+/**
+ * Displays the skills amd hides conduct and game rules
+ */
 function displaySkills(){
-    rulesSection.innerHTML =`<h2>Skills</h3>
-                            <br>`
-    for (const skill in skills){
-        rulesSection.innerHTML += `
-        <div id=${skills[skill].name} class="skill-box">
-            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(skills[skill].name))}</h3><h3>${skills[skill].cost}</h3></span>
-            <p><b>Restrictions:</b> ${skills[skill].restrictions}</p>
-            <p>${skills[skill].description}</p>
-        </div>
-        <br>
-        `
-    }
+    let gameRules = document.getElementById("game-rules")
+    let conductRules = document.getElementById("conduct-rules")
+    let skillRules = document.getElementById("skill-rules")
+    skillRules.classList.remove("hidden")
+    conductRules.classList.add("hidden")    
+    gameRules.classList.add("hidden")
 }
+
+
 // Character Page
 /**
  * This function displays a character image based off the origin, along with default origin skills and sets the available skill points
  */
 function displayOrigin(origin){
-    picture = document.getElementById("reference-image")
-    let skillPointsAvailable = parseInt(document.getElementById("skill-points-remaining").innerText)
-    
+    picture = document.getElementById("reference-image")    
     if (origin == "Blank"){
         picture.innerHTML = ``
         document.getElementById("skill-points-remaining").innerText = 6
