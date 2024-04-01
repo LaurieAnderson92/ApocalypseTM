@@ -7,6 +7,11 @@
 
 /* Global styles */
 body{
+    background-color:#3A342B;
+    background: url(../../assets/images/body-pexels-pixabay-235985.jpg;);
+}
+
+section, nav{
     background-color: #DCD8CC;
 }
 
@@ -83,6 +88,7 @@ a:hover {
 .logo{
     position: absolute;
     width: 100%;
+    max-width: 1440px;
     top: 1rem;
     text-align: center;
 }
