@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function displayEvents(){
 )
 // This code pre populates the header-event-details div with event 0
 document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById('event-details').innerHTML = `${events[0].eventInfo}`
+    document.getElementById('event-details').innerHTML = `
+    <h3>${events[0].eventName}</h3>
+    ${events[0].eventInfo}`
 })
 
 //This code prepopulates the skills section with all of the skills when the DOM is loaded, this it to assist with screenreaders
@@ -21,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function loadSkills(){
                             <br>`
     for (const skill in generalSkills){
         skillRules.innerHTML += `
-        <div id=${generalSkills[skill].name} class="skill-box">
-            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(generalSkills[skill].name))}</h3><h3>${generalSkills[skill].cost}</h3></span>
+        <div id=${generalSkills[skill].name} class="skill-box section-style">
+            <span class="skill-heading section-style"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(generalSkills[skill].name))}</h3><h3>${generalSkills[skill].cost}</h3></span>
             <p>${generalSkills[skill].description}</p>
         </div>
         <br>
@@ -32,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function loadSkills(){
                             <br>`
     for (const skill in originSkills){
         skillRules.innerHTML += `
-        <div id=${originSkills[skill].name} class="skill-box">
-            <span class="skill-heading "><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
-            <h3>Origin: ${originSkills[skill].origin}</h3> 
+        <div id=${originSkills[skill].name} class="skill-box section-style">
+            <span class="skill-heading section-style"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
+            <h3>Origin: ${capitalizeFirstLetter(originSkills[skill].origin)}</h3> 
             <p>${originSkills[skill].description}</p>
         </div>
         <br>
@@ -62,7 +64,7 @@ let events = [
                 spreading ever wider, the council must grapple with the urgent question of how to stem 
                 the tide of darkness threatening to engulf their world.`},
     // Below is the details for event 3
-    {eventName: "fool's hope",
+    {eventName: "Fool's Hope",
     eventDate: "September 30th",
     eventLocation: "Morgan Camping Site",
     eventInfo: `With the remnants of Lundon's defenses shattered and the world teetering on the brink, 
@@ -198,8 +200,9 @@ let generalSkills = skills.filter(function(skill) {
 
 // displays event Info on every page when user clicks on the event
 function displayEventInfo(event){
-    document.getElementById('event-details').innerHTML = 
-    `${events[event].eventInfo}`
+    document.getElementById('event-details').innerHTML = `
+    <h3>${events[event].eventName}</h3>
+    ${events[event].eventInfo}`
 }
 
 /**

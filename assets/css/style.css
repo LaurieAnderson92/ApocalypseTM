@@ -19,12 +19,12 @@ h1{
 
 p,h2,h3,input,select{
     color: #3A342B;
-    padding-left: 0.5rem;
     font-family: "Forum", sans-serif;
 }
 
-h2,h3{
+.section-style > :is(p,h2,h3){
     padding-top: 1rem;
+    padding-left: 0.5rem;
 }
 
 ul {
@@ -261,6 +261,9 @@ input[type="text"],[type="email"],select{
 /* Events */
 .event-group{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
 }
 .events{
     border-style: solid;
@@ -269,6 +272,9 @@ input[type="text"],[type="email"],select{
 }
 .events:hover > *{
     color: #DCD8CC;
+}
+#event-details{
+    flex-grow: 1;
 }
 
 #map {
