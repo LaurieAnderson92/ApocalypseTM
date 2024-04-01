@@ -284,19 +284,19 @@ function displayOrigin(origin){
         document.getElementById("skill-points-remaining").innerText = 6
         //Need to add alt Text
     }else if (origin == "dweller"){
-        picture.innerHTML = `<img class="aside-image" src="assets/images/character-dweller.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-dweller.jpeg" alt="Digital art of a human facing the viewer with the reminents of a tactical uniform holding a sword maqde of scrap metal">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "wastelander"){
-        picture.innerHTML = `<img class="aside-image" src="assets/images/character-wastelander.jpeg" >`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-wastelander.jpeg" alt="Digital art of a human facing the viewer dressed in rags with a gasmask in a shanty town">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "twisted"){
-        picture.innerHTML = `<img class="aside-image" src="assets/images/character-twisted.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-twisted.jpeg" alt="Digital art of a human with clown make up sitting on a curb with the ruins of sociaty behind him">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "altered"){
-        picture.innerHTML = `<img class="aside-image" src="assets/images/character-altered.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-altered.jpeg" alt="Digital Art of a Mutated human with elven ears wearing clothes made from leaves">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "enhanced"){
-        picture.innerHTML = `<img class="aside-image" src="assets/images/character-enhanced.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-enhanced.jpeg" alt="Digital art of a Bipedal Robotic machine with animalist features">`
         document.getElementById("skill-points-remaining").innerText = 6
     }
 }
