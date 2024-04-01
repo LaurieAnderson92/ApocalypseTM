@@ -2,10 +2,10 @@
 //This function gets the event objects and displays each event as a individual div
 document.addEventListener("DOMContentLoaded", function displayEvents(){
     for (const event in events) {
-        document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border" onclick="displayEventInfo(${event})"><p> 
+        document.getElementById('event-infomation').innerHTML += `<div id="event${event}" class="events div-border hover-darken" onclick="displayEventInfo(${event})"><h3> 
         ${events[event].eventDate} - ${events[event].eventName}<br>
         ${events[event].eventLocation}
-        </p></div>`
+        </h3></div>`
         }
     }
 )
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function loadSkills(){
     for (const skill in originSkills){
         skillRules.innerHTML += `
         <div id=${originSkills[skill].name} class="skill-box">
-            <span class="skill-heading"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
+            <span class="skill-heading "><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(originSkills[skill].name))}</h3><h3>${originSkills[skill].cost}</h3></span>
             <h3>Origin: ${originSkills[skill].origin}</h3> 
             <p>${originSkills[skill].description}</p>
         </div>
