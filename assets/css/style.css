@@ -191,7 +191,12 @@ input[type="text"],[type="email"],select{
     text-align: center;
 }
 
-#form-origin{
+.btn{
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+#form-origin, #form-buttons{
     display: flex;
     justify-content: space-around;
 }
