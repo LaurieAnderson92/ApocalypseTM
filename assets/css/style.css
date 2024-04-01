@@ -338,6 +338,17 @@ footer > p,i{
         object-fit: cover;
     }
 
+    /* ***Header*** */
+    #bannertwo{
+        display: block;
+    }
+    #bannerthree{
+        display: block;
+    }
+    #bannerfour{
+        display: block;
+    }
+
     /* ***Character Creatr Page*** */
     #reference-image > img{
         max-width: 480px;
