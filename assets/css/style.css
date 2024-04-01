@@ -160,6 +160,12 @@ nav{
 }
 
 /* Character Page */
+fieldset{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .character-form{
     display: flex;
     flex-direction: column;
@@ -176,8 +182,10 @@ nav{
 
 .form-input{
     display: flex;
-    width: 100%;
+    width: 70%;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="text"],[type="email"],select{
@@ -195,7 +203,12 @@ input[type="text"],[type="email"],select{
     margin: 1rem;
 }
 
-#form-origin, #form-buttons{
+#character-skilllist{
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+#form-origin{
     display: flex;
     justify-content: space-around;
 }
@@ -310,6 +323,7 @@ footer > p,i{
     }
     .fullscreen-flexbox{
         display: flex;
+        flex-direction: row;
         height: auto;
     }
 
@@ -323,4 +337,13 @@ footer > p,i{
         border-radius: 8px;
         object-fit: cover;
     }
+
+    /* ***Character Creatr Page*** */
+    #reference-image > img{
+        max-width: 480px;
+        top: 0rem;
+        right: 0;
+        border-radius: 8px;
+    }
+
 }

@@ -284,19 +284,19 @@ function displayOrigin(origin){
         document.getElementById("skill-points-remaining").innerText = 6
         //Need to add alt Text
     }else if (origin == "dweller"){
-        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-dweller.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-dweller.jpeg">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "wastelander"){
-        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-wastelander.jpeg" >`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-wastelander.jpeg" >`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "twisted"){
-        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-twisted.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-twisted.jpeg">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "altered"){
-        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-altered.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-altered.jpeg">`
         document.getElementById("skill-points-remaining").innerText = 6
     }else if (origin == "enhanced"){
-        picture.innerHTML = `<img class="drop-animation" src="assets/images/character-enhanced.jpeg">`
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-enhanced.jpeg">`
         document.getElementById("skill-points-remaining").innerText = 6
     }
 }
