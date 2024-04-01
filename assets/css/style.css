@@ -26,6 +26,10 @@ p,h2,h3,input,select{
     padding: 0.5rem;
 }
 
+.section-style > h2{
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
 }
