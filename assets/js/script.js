@@ -48,11 +48,10 @@ let map;
 
 async function initMap() {
 const { Map } = await google.maps.importLibrary("maps");
-
-map = new Map(document.getElementById("map"), {
-center: { lat: 50.792990492034875, lng: -3.407124731989129},
-zoom: 8,
-});
+let campsite = {lat: 50.792990492034875, lng: -3.407124731989129}
+map = new Map(document.getElementById("map"), {center: campsite,zoom: 10}
+);
+let marker = new google.maps.Marker({position: campsite, map: map})
 }
 
 /* This creats the event objects which are used on every page, They are designed to be updated
