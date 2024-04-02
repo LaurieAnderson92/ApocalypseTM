@@ -44,6 +44,17 @@ document.addEventListener("DOMContentLoaded", function loadSkills(){
     }
 })
 
+let map;
+
+async function initMap() {
+const { Map } = await google.maps.importLibrary("maps");
+
+map = new Map(document.getElementById("map"), {
+center: { lat: 50.792990492034875, lng: -3.407124731989129},
+zoom: 8,
+});
+}
+
 /* This creats the event objects which are used on every page, They are designed to be updated
 once a year with each event for that year being it's own object.
 */
