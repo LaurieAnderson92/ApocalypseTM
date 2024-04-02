@@ -190,6 +190,20 @@ nav{
     display: flex;
 }
 
+#rules-picture{
+    background: url(../../assets/images/rules-pexels-gioele-fazzeri-5030527.jpg) center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#rules-picture > p{
+    color: #DCD8CC;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+
 /* Character Page */
 fieldset{
     max-width: 600px;
@@ -320,7 +334,7 @@ input[type="text"],[type="email"],select{
     flex-grow: 1;
 }
 
-#map {
+#map,.bottom-image {
     height: 320px
 }
 
@@ -392,12 +406,10 @@ footer > p,i{
         border-radius: 8px;
     }
 
-
-    
     .event-group{
         max-width: 480px
     }
-    #map{
+    #map, .bottom-image{
         width: 100%;
         height: 350px;
     }
