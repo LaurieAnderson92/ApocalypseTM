@@ -340,6 +340,7 @@ footer > p,i{
         display: flex;
         flex-direction: row;
         height: auto;
+        justify-content: space-between;
     }
 
     .aside-image{
