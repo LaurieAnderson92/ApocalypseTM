@@ -288,7 +288,7 @@ input[type="text"],[type="email"],select{
 /* Events */
 .event-group{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;
-    height: 450px;
+    height: 350px;
     display: flex;
     flex-direction: column;
 }
@@ -383,6 +383,6 @@ footer > p,i{
     }
     #map{
         width: 100%;
-        height: 450px;
+        height: 350px;
     }
 }
