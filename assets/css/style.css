@@ -153,6 +153,14 @@ nav{
     z-index: 0;
 }
 
+/* Lower section: events / Map/ bottom image */
+.bottom-image > p{
+    color: #DCD8CC;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+
 /* This section of for styles that happen on individual Pages */
 
 /* Rules Page */
@@ -190,20 +198,14 @@ nav{
     display: flex;
 }
 
+/* Rules Page: Bottom Image*/
+
 #rules-picture{
     background: url(../../assets/images/rules-pexels-gioele-fazzeri-5030527.jpg) center/cover;
     text-align: center;
     display: flex;
     flex-direction: column-reverse;
 }
-
-#rules-picture > p{
-    color: #DCD8CC;
-    font-size: 3rem;
-    background-color: rgba(0, 0, 0, .5);
-    
-}
-
 /* Character Page */
 fieldset{
     max-width: 600px;
@@ -313,7 +315,13 @@ input[type="text"],[type="email"],select{
 .form-skill-selected{
     display: block;
 }
-
+/* World Page */
+#world-picture{
+    background: url(../../assets/images/world-pexels-daniel-lienert-18148585.jpg) center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
 
 /* Events */
 .event-group{
