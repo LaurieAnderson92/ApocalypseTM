@@ -170,8 +170,27 @@ nav{
     max-width: 300px;
 }
 
+.skill-box{
+    min-width:320px;
+    max-width: 500px;
+    border-color: #3A342B;
+    border-width: 2px;
+    border-style: solid;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
 #rules-nav{
     display: flex;
+}
+#skill-rules{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#skill-rules > h2{
+    max-width: none;
+    flex-basis: 100%;
 }
 
 /* Character Page */

@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function loadSkills(){
             <span class="skill-heading section-style"><h3>${replaceDashesWithSpaces(capitalizeFirstLetter(generalSkills[skill].name))}</h3><h3>${generalSkills[skill].cost}</h3></span>
             <p>${generalSkills[skill].description}</p>
         </div>
-        <br>
         `
     }
     skillRules.innerHTML +=`<h2>Origin Skills</h3>
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function loadSkills(){
             <h3>Origin: ${capitalizeFirstLetter(originSkills[skill].origin)}</h3> 
             <p>${originSkills[skill].description}</p>
         </div>
-        <br>
         `
     }
 })
