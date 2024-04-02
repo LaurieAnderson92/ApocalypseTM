@@ -353,7 +353,10 @@ footer > p,i{
         border-radius: 8px;
         object-fit: cover;
     }
-
+    .map-events-section{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     /* ***Header*** */
     #bannertwo{
         display: block;
@@ -373,10 +376,7 @@ footer > p,i{
         border-radius: 8px;
     }
 
-    #map-events-section{
-        display: flex;
-        flex-direction: row-reverse;
-    }
+
     
     .event-group{
         max-width: 480px
