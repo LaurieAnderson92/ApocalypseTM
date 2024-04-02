@@ -217,7 +217,6 @@ fieldset{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0.25rem;
 }
 
 .form-group{
@@ -315,6 +314,14 @@ input[type="text"],[type="email"],select{
 .form-skill-selected{
     display: block;
 }
+
+#character-picture{
+    background: url(../../assets/images/character-bottom.jpeg) top center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 /* World Page */
 #world-picture{
     background: url(../../assets/images/world-pexels-daniel-lienert-18148585.jpg) center/cover;
@@ -407,6 +414,10 @@ footer > p,i{
     }
 
     /* ***Character Creator Page*** */
+    fieldset{
+        margin-left: calc((960px - 600px)/2);
+    }
+
     #reference-image > img{
         max-width: 480px;
         top: 0rem;
