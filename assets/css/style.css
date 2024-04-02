@@ -28,8 +28,11 @@ p,h2,h3,input,select{
     font-family: "Forum", sans-serif;
 }
 
-.section-style > :is(p,h2,h3){
+.section-style > :is(p,h2,h3,span){
     padding: 0.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-style > h2{
