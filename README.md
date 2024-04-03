@@ -2,9 +2,9 @@
 
 ApocalypseTM acts as a advert and a point of refrence for a upcoming UK based Live Action Roleplay with the same name, it contains the rules for how the game is goverened, the setting brief that the players need to know and funtionality to build a character for the game. As a new system designed by hobbiests, the rules and information may need to be updated regulaly. So utilizing Javascript a rule only needs to be updated in one location for it to be updated throughout the entire site.
 
-Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
+![Finished Site](assets/documentation/amiresponsive-apocolypsetm.png)
 
-Add a link to the live site here, for Milestone 1 this will be the GitHub Pages Link from when you deployed the site.
+https://laurieanderson92.github.io/ApocalypseTM/
 
 If you want to add optional [shields.io](https://shields.io) badges to your README, I like to add them to this section.
 
@@ -49,21 +49,34 @@ test
 
 ## User Experience (UX)
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/Bully-Book-Club#user-experience-ux)
+### Initial Discussion
+
+ApocalypseTM is a upcoming Live Action Role-Play based in the South West of England, Most of the space used is in Discord and Facebook which doesn't gell well with a interactive and tone setting experience. The Organizers of the game are spending a large amount of time manualy awnsering questions and repeating awnsers. This site aims to consense the relevant information and is designed to be easily updatable as the game continues.
+
+#### Key information for the site
+
+- The rules of the game, easily accessible on a mobile device while in play.
+- A way to create a character without the need for mental maths
+- Repositry of infoation about the game, setting and world.
+- Synposis of coming games along with the location of the games that year.
+- Links to the game social pages where new players can be interactive.
 
 ### User Stories
 
-New LARPers, Users who haven't larped before, or have little experience Larping
+#### New LARPers
+Users who haven't larped before, or have little experience Larping
 - A first timer who is new to LARP should be able to find out what LARP is
 - A first timer who is looking to attend their first LARP should find a clear list of what is expected of them
 - Their experience of the website should be enhanced with intuitive navigation 
 
-Players, who have signed up to the game and are looking for rules or event information
+#### Players 
+Users who have signed up to the game and are looking for rules or event information
 - A player should be able to see, at a glance when the next event is and what the synopsis for the event is
 - A player should be able to easily navigate the rules for how the game works
 - Their experience should be thematic with a good user experience.
 
-Refs, users who may use the website to help them run a game.
+#### Game Masters 
+Users who may use the website to help them run the game.
 - A ref should be able to refer to rules quickly and have all of the information they need to make a ruling
 - A ref should have easy access to the conduct rules incase players are in breach of them.
 - Their experience should be focused on getting information that they need quickly, likely on a mobile screen.
@@ -74,54 +87,60 @@ Refs, users who may use the website to help them run a game.
 
 ### Colour Scheme
 
-Add all information about your colour scheme for your site here. You can explain why you choose the colours you did?
+![color palette](assets/documentation/colour-palette.png)
 
-I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is [coolors](https://coolors.co/), but there are lots of other sites that also do the same thing, like [ColorSpace](https://mycolor.space/?hex=%23F5F5F5&sub=1), [Muzli Colors](https://colors.muz.li/), [Adobe Colour Wheel](https://color.adobe.com/create/color-wheel) and [Canva](https://www.canva.com/colors/color-palette-generator/) to name a few.
+The website uses a pallate of colours that invoke a fantasy map, inspired by Lord of the Rings and other grand landscapes that also mirrors areas of outstanding beauty found in the south west of England
 
 ### Typography
 
-If you've imported fonts to use in your project, add some information about them here. You can include information like:
+Google fonts were used for this project:
 
-Why did you choose the font you have?
-Is this an accessibly friendly font?
-What weights have you included?
+Forum was used for the paragraph elements. It is a serif font.
+Cinzel was used for headings. It is a serif font
 
-I also like to include an image of the fonts chosen as a reference.
-
-[Google Fonts](https://fonts.google.com/) is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
+Both fonts were used to invoke a fantasy feel to the page
 
 ### Imagery
 
 The main imagry in this site is going to be London after a extintion event. The devestation levels are low, but nature will be reclaiming the world. the site will follow these warm dirt colors with effects to make images look weathered.
+The pictures were open sourced from [Pexels](https://www.pexels.com/) or generated by [DeepAI](https://deepai.org/machine-learning-model/text2img)
+
+Edits to the images were made using [Pixlr](https://pixlr.com/express/)
 
 ### Wireframes
 
-Add the images or links for your wireframes here.
+[index.html](assets/documentation/index.html.png)
 
-There are lots of different options to create your wireframes - Code Institute students can access [Balsamiq](https://balsamiq.com/) as part of the course.
+[faq.html](assets/documentation/faq.html.png)
 
-Some other options include [Figma](https://www.figma.com/), [AdobeXD](https://www.adobe.com/products/xd.html), [Sketch](https://www.sketch.com/?utm_source=google&utm_medium=cpc&adgroup=uxui&device=c&matchtype=e&utm_campaign=ADDICTMOBILE_SKETCH_GAD_DG_UK_T1_ALWAYS-ON_S_TRF_PROS_BRAND&utm_term=sketch&utm_source=google&utm_medium=cpc&utm_content=TOF_BRND__generic&hsa_acc=8710913982&hsa_cam=16831089317&hsa_grp=134620695759&hsa_ad=592060065319&hsa_src=g&hsa_tgt=kwd-14921750&hsa_kw=sketch&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwr4eYBhDrARIsANPywCjRIFn93DMezYnsyE5Fic_8l8kynJtut0GYMU01TiohHjwziFtlH0gaAhteEALw_wcB) and [Mockup](https://apps.apple.com/us/app/mockup-sketch-ui-ux/id1527554407) to name just a few! Or you can even go old school and get those wireframes completed using pen and paper. Just snap an image of the completed wireframes to add the images to the README.
+[rules.html](assets/documentation/rules.html.png)
+
+[world.html](assets/documentation/world.html.png)
+
+[charatcer.html](assets/documentation/character.html.png)
 
 ## Features
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/TheQuizArms#Features)
-
-This section can be used to explain what pages your site is made up of.
+The website is comprised of seven pages, five of which are accessible from the navigation menu (index, rules, faq, character & world.) The other pages are a confirmatiopn page which is shown once a user submits the form on the character page and a 404 page.
 
 ### General features on each page
 
-If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
+All of the website pages have:
 
-I then like to add a screenshot of each page of the site here, i use [amiresponsive](https://ui.dev/amiresponsive) which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
+- A responsive navigation bar at the top which allows the user to navigate around the website. above the bar is a banner image that scales based on with and can expand into 4 images that depict the scene and tone of the game. The dropdown bar is behind the burger icon and is animated to be interactable and the rules button is front and center for easy reference, particularly on mobile devices.
+
+- A footer that conatins the copywright information along with the socials of the webpage.
+
+- Responsive controls that prevents the content from getting too wide on large and high resolution monitors above 1440px width.
+
+### Index 
 
 ### Future Implementations
 
 What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
 
 ### Colour Scheme
-https://coolors.co/69b536-dcd8cc-8f8570-a19729-3a342b
 
-![color palette](assets/documentation/colour-palette.png)
 
 ### Accessibility
 
