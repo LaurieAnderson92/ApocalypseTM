@@ -285,8 +285,8 @@ function displaySkills(){
 function displayOrigin(origin){
     picture = document.getElementById("reference-image")
     description = document.getElementById("origin-description")   
-    if (origin == "Blank"){
-        picture.innerHTML = ``
+    if (origin == "blank"){
+        picture.innerHTML = `<img class="aside-image" src="assets/images/character-blank.jpeg" alt="Outline of two warriors jumping">`
         document.getElementById("skill-points-remaining").innerText = 6
         //Need to add alt Text
     }else if (origin == "dweller"){
