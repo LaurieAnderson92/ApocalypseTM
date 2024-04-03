@@ -330,6 +330,15 @@ input[type="text"],[type="email"],select{
     flex-direction: column-reverse;
 }
 
+/* submitted page */
+.extra-padding{
+    display: flex;
+    padding: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+
 /* Events */
 .event-group{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;
