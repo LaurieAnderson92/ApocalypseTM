@@ -159,7 +159,7 @@ nav{
 /* Lower section: events / Map/ bottom image */
 .bottom-image > p{
     color: #DCD8CC;
-    font-size: 2rem;
+    font-size: min(7vw, 2rem);
     background-color: rgba(0, 0, 0, .5);
     max-height: 320px;
     
