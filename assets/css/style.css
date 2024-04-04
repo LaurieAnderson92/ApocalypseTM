@@ -158,6 +158,7 @@ nav{
     color: #DCD8CC;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, .5);
+    max-height: 320px;
     
 }
 
@@ -300,10 +301,8 @@ input[type="text"],[type="email"],select{
 }
 
 #reference-image > img{
-    max-width: calc(320px - 6rem);
+    max-width: 600px;
     width: 80vw;
-    position: relative;
-    top: 2rem;
     border-radius: 8px;
 }
 
@@ -342,7 +341,7 @@ input[type="text"],[type="email"],select{
 /* Events */
 .event-group{
     background: url(../../assets/images/banner-highway.jpeg) center/cover;
-    height: 350px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
 }
