@@ -200,6 +200,7 @@ nav{
 
 #rules-nav{
     display: flex;
+    padding: 0.5rem;
 }
 
 /* Rules Page: Bottom Image*/
