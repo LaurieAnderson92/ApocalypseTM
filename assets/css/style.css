@@ -1,458 +1,464 @@
 /* Wildcard Selector */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Global styles */
-body{
-    background-color:#3A342B;
-    background: url(../../assets/images/body-pexels-pixabay-235985.jpg) center;
+body {
+  background-color: #3a342b;
+  background: url(../../assets/images/body-pexels-pixabay-235985.jpg) center;
 }
 
-section, nav{
-    background-color: #DCD8CC;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+section,
+nav {
+  background-color: #dcd8cc;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-h1{
-    color: #CABC25;
-    text-shadow: 2px 2px #3A342B;
-    font-size: 2.5rem;
-    font-family: "Cinzel", serif;
+h1 {
+  color: #cabc25;
+  text-shadow: 2px 2px #3a342b;
+  font-size: 2.5rem;
+  font-family: "Cinzel", serif;
 }
 
-p,h2,h3,input,select{
-    color: #3A342B;
-    font-family: "Forum", sans-serif;
+input[type="text"],
+[type="email"],
+select {
+  width: 175px;
+  height: 2rem;
+  background-color: #dcd8cc;
 }
 
-.section-style > :is(p,h2,h3,span){
-    padding: 0.5rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-style > h2{
-    text-align: center;
-}
-.fullscreen-flexbox{
-    padding-top: 0.5rem;
+p,
+h2,
+h3,
+input,
+select {
+  color: #3a342b;
+  font-family: "Forum", sans-serif;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-a, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+a,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 a:hover {
-    color: #69B536;
+  color: #69b536;
 }
 
-.hidden{
-    display: none;
+.section-style > :is(p, h2, h3, span) {
+  padding: 0.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.drop-animation{
-    transform: translateY(-25px);
-    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
-    pointer-events: none;
+.section-style > h2 {
+  text-align: center;
+}
+.fullscreen-flexbox {
+  padding-top: 0.5rem;
 }
 
-.div-border{
-    background-color: rgba(215,215, 215, 0.7) ;
-    border-style:solid;
-    border-width: 0px;
-    text-align: center;
-    padding: 0.75rem;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+.extra-padding {
+  display: flex;
+  padding: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
 }
 
-.hover-darken:hover{
-    background-color: rgba(0, 0, 0, .3);
+.div-border {
+  background-color: rgba(215, 215, 215, 0.7);
+  border-style: solid;
+  border-width: 0px;
+  text-align: center;
+  padding: 0.75rem;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hover-darken:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Header */
-/* Banner - Pictures */
-#picturebanner{
-    height: 175px;
-    display: flex;
-    flex-direction: row;
-}
-
-.banner{
-    background-size: cover; 
-    width: 425px;
-    flex-grow: 1;
-}
-
 /* Logo position */
-.logo{
-    position: absolute;
-    width: 100%;
-    max-width: 1440px;
-    top: 1rem;
-    text-align: center;
+.logo {
+  position: absolute;
+  width: 100%;
+  max-width: 1440px;
+  top: 1rem;
+  text-align: center;
 }
 
-#bannerone{
-    background: url(../../assets/images/banner-bridge.jpeg) center/cover;
+/* Header - Pictures */
+#picturebanner {
+  height: 175px;
+  display: flex;
+  flex-direction: row;
 }
-#bannertwo{
-    background: url(../../assets/images/banner-highway.jpeg) center/cover;
-    display: none;
+
+.banner {
+  background-size: cover;
+  width: 425px;
+  flex-grow: 1;
 }
-#bannerthree{
-    background: url(../../assets/images/banner-thames.jpeg) center/cover;
-    display: none;
+
+/* Picture one viable on smaller screens, all four visible on monitors */
+#bannerone {
+  background: url(../../assets/images/banner-bridge.jpeg) center/cover;
 }
-#bannerfour{
-    background: url(../../assets/images/banner-westminster.jpeg) center/cover;
-    display: none;
+#bannertwo {
+  background: url(../../assets/images/banner-highway.jpeg) center/cover;
+  display: none;
+}
+#bannerthree {
+  background: url(../../assets/images/banner-thames.jpeg) center/cover;
+  display: none;
+}
+#bannerfour {
+  background: url(../../assets/images/banner-westminster.jpeg) center/cover;
+  display: none;
 }
 
 /* Nav */
-nav{
-    display: flex;
-    flex-wrap: wrap;
+nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 /* acts as the starting point for the dropdown animation "openDropdown" Function */
-.dropdown-animation{
-    opacity: 0;
-    transform: translateY(-25px);
-    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
-    pointer-events: none;
+.dropdown-animation {
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+  pointer-events: none;
+}
+/* acts as the end point for the dropdown animation "openDropdown" Function */
+.dropdown-animation-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  pointer-events: all;
 }
 
-.dropdown-animation-active{
-    opacity: 1;
-    transform: translateY(0px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    pointer-events: all
+#nav-menu {
+  width: 20%;
+  z-index: 1;
 }
-
-#nav-menu{
-    width: 20%;
-    z-index: 1;
+#nav-character {
+  width: 80%;
+  z-index: 1;
 }
-#nav-character{
-    width: 80%;
-    z-index: 1;
-}
-#nav-dropdown{
-    width: 40%;
-    max-width: 288px;
-    position: absolute;
-    top: calc(175px + 2.5rem);
-    left: calc(0 + ((vw - 1440)/2));
-    background-color: rgba(215,215, 215, 1);
-    padding: .75rem;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
-    z-index: 0;
+#nav-dropdown {
+  width: 40%;
+  max-width: 288px;
+  position: absolute;
+  top: calc(175px + 2.5rem);
+  left: calc(0 + ((vw - 1440) / 2));
+  background-color: rgba(215, 215, 215, 1);
+  padding: 0.75rem;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  z-index: 0;
 }
 
 /* Lower section: events / Map/ bottom image */
-.bottom-image > p{
-    color: #DCD8CC;
-    font-size: min(7vw, 2rem);
-    background-color: rgba(0, 0, 0, .5);
-    max-height: 320px;
-    
+.bottom-image > p {
+  color: #dcd8cc;
+  font-size: min(7vw, 2rem);
+  background-color: rgba(0, 0, 0, 0.5);
+  max-height: 320px;
 }
 
 /* This section of for styles that happen on individual Pages */
-
 /* Rules Page */
-.rules-selector{
-    padding: 2rem;
-    text-align: center;
-    flex-grow: 1;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #3A342B;
+.rules-selector {
+  padding: 2rem;
+  text-align: center;
+  flex-grow: 1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3a342b;
 }
-.skill-heading{
-    display: flex;
-    width: 60%;
-    max-width: 300px;
+.skill-heading {
+  display: flex;
+  width: 60%;
+  max-width: 300px;
 }
-.skill-box-flex{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center
-}
-
-.skill-box{
-    width: 400px;
-    height: 200px;
-    border-color: #3A342B;
-    border-width: 2px;
-    border-style: solid;
+.skill-box-flex {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#rules-nav{
-    display: flex;
-    padding: 0.5rem;
+.skill-box {
+  width: 400px;
+  height: 200px;
+  border-color: #3a342b;
+  border-width: 2px;
+  border-style: solid;
+}
+
+#rules-nav {
+  display: flex;
+  padding: 0.5rem;
 }
 
 /* Rules Page: Bottom Image*/
-
-#rules-picture{
-    background: url(../../assets/images/rules-pexels-gioele-fazzeri-5030527.jpg) center/cover;
-    text-align: center;
-    display: flex;
-    flex-direction: column-reverse;
+#rules-picture {
+  background: url(../../assets/images/rules-pexels-gioele-fazzeri-5030527.jpg)
+    center/cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
+
 /* Character Page */
-fieldset{
-    max-width: 600px;
-    margin: auto;
-    margin-top: 0.5rem;
+fieldset {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 0.5rem;
 }
 
-.character-form{
-    margin-left: auto;
-    margin-right:auto;
+.character-form {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.form-group{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-    justify-content: space-around;
+.form-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  justify-content: space-around;
 }
 
-.form-input{
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+.form-input {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[type="text"],[type="email"],select{
-    width: 175px;
-    height: 2rem;
-    background-color: #DCD8CC;
+.form-skill-options {
+  text-align: center;
 }
 
-.form-skill-options{
-    text-align: center;
+.btn {
+  padding: 0.5rem;
+  margin: 1rem;
 }
 
-.btn{
-    padding: 0.5rem;
-    margin: 1rem;
+#character-skilllist {
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
-#character-skilllist{
-    flex-wrap: nowrap;
-    flex-direction: column;
+#form-origin {
+  display: flex;
+  justify-content: space-around;
 }
 
-#form-origin{
-    display: flex;
-    justify-content: space-around;
+#form-origindetails {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  left: 0px;
 }
 
-#form-origindetails{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-    left: 0px;
+#skill-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#skill-points{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#form-characterskills {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  padding: 0.25rem;
+}
+#form-characterskills > label {
+  padding-left: 0rem;
+  flex-grow: 1;
+  border-style: solid;
+  border-color: #3a342b;
+  border-width: 1px;
+  max-width: 150px;
+  min-width: 100px;
+}
+.skill-selected {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-#form-characterskills{
-    display: flex;
-    align-content: space-between;
-    justify-content: space-between;
-    padding: 0.25rem;
-    
-}
-#form-characterskills > label{
-    padding-left: 0rem;
-    flex-grow: 1;
-    border-style: solid;
-    border-color: #3A342B;
-    border-width: 1px;
-    max-width: 150px;
-    min-width: 100px;
-}
-.skill-selected{
-    background-color: rgba(0, 0, 0, .3);
+/* Character Page: Reference Image */
+#reference-image {
+  display: flex;
+  justify-content: center;
 }
 
-/* Reference image on the character sheet */
-#reference-image{
-    display: flex;
-    justify-content: center;
+#reference-image > img {
+  max-width: 600px;
+  width: 80vw;
+  border-radius: 8px;
 }
 
-#reference-image > img{
-    max-width: 600px;
-    width: 80vw;
-    border-radius: 8px;
+/* Character Page: Skills displaying on selection*/
+.form-skill-unselected {
+  display: none;
+}
+.form-skill-selected {
+  display: block;
 }
 
-/* This is the toggle for the skills as they are selected, try adding an animation */
-.form-skill-unselected{
-    display: none;
-}
-.form-skill-selected{
-    display: block;
-}
-
-#character-picture{
-    background: url(../../assets/images/character-bottom.jpeg) top center/cover;
-    text-align: center;
-    display: flex;
-    flex-direction: column-reverse;
+#character-picture {
+  background: url(../../assets/images/character-bottom.jpeg) top center/cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 /* World Page */
-#world-picture{
-    background: url(../../assets/images/world-pexels-daniel-lienert-18148585.jpg) center/cover;
-    text-align: center;
-    display: flex;
-    flex-direction: column-reverse;
+#world-picture {
+  background: url(../../assets/images/world-pexels-daniel-lienert-18148585.jpg)
+    center/cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-/* submitted page */
-.extra-padding{
-    display: flex;
-    padding: 8rem;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-}
-
+/* Indivdual page configuration ends */
 /* Events */
-.event-group{
-    background: url(../../assets/images/banner-highway.jpeg) center/cover;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
+.event-group {
+  background: url(../../assets/images/banner-highway.jpeg) center/cover;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
 }
-.events{
-    border-style: solid;
-    border-width: 1px;
-    border-color: #DCD8CC;
+.events {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dcd8cc;
 }
-.events:hover > *{
-    color: #DCD8CC;
+.events:hover > * {
+  color: #dcd8cc;
 }
-#event-details{
-    flex-grow: 1;
+#event-details {
+  flex-grow: 1;
 }
 
-#map,.bottom-image {
-    height: 320px
+#map,
+.bottom-image {
+  height: 320px;
 }
 
 /* Footer */
-footer{
-    position: sticky;
-    bottom: 0vw;
+footer {
+  position: sticky;
+  bottom: 0vw;
+  display: flex;
+  background-color: rgba(215, 215, 215, 1);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+footer > p,
+i {
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.footer {
+  min-width: 50px;
+  height: 50px;
+  text-align: center;
+  align-content: center;
+}
+/* Media queries, the below happens when the monitor is 1024 pixels wide or greater */
+@media screen and (min-width: 1024px) {
+  /* Montor Screen: General */
+  body {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fullscreen-flexbox {
     display: flex;
-    background-color: rgba(215,215, 215, 1);
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
-    align-items: center;
-}
-footer > p,i{
-    text-align: center;
-    vertical-align: middle;
-    align-items: center;
-}
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+  }
 
-.footer{
-    min-width: 50px;
-    height: 50px;
-    text-align: center;
-    align-content: center;
-}
+  .aside-image {
+    display: block;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 40%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  .map-events-section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  /* Monitor Screen: Header*/
+  #bannertwo {
+    display: block;
+  }
+  #bannerthree {
+    display: block;
+  }
+  #bannerfour {
+    display: block;
+  }
 
-@media screen and (min-width:1024px) {
-    body{
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    h1{
-        font-size: 6rem;
-    }
-    form{
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .fullscreen-flexbox{
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        justify-content: space-between;
-    }
-
-    .aside-image{
-        display: block;
-        top: 0.5rem;
-        right: 0.5rem;
-        width: 40%;
-        max-width: 480px;
-        height: auto;
-        border-radius: 8px;
-        object-fit: cover;
-    }
-    .map-events-section{
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    /* ***Header*** */
-    #bannertwo{
-        display: block;
-    }
-    #bannerthree{
-        display: block;
-    }
-    #bannerfour{
-        display: block;
-    }
-
-    /* ***Character Creator Page*** */
-    fieldset{
-        margin: 1rem
-    }
-    .aside-image{
+  /* Monitir: Character Creator Page*/
+  fieldset {
+    margin: 1rem;
+  }
+  .aside-image {
     align-items: self-end;
-    }
+  }
 
-    #reference-image > img{
-        max-width: 480px;
-        top: 0rem;
-        right: 0;
-        border-radius: 8px;
-    }
+  #reference-image > img {
+    max-width: 480px;
+    top: 0rem;
+    right: 0;
+    border-radius: 8px;
+  }
 
-    .event-group{
-        max-width: 480px
-    }
-    #map, .bottom-image{
-        width: 100%;
-        height: 350px;
-    }
+  .event-group {
+    max-width: 480px;
+  }
+  #map,
+  .bottom-image {
+    width: 100%;
+    height: 350px;
+  }
 }
