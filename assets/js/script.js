@@ -1,51 +1,3 @@
-// ****Code that runs when the DOM loads****
-//This function gets the event objects and displays each event as a individual div
-document.addEventListener("DOMContentLoaded", function displayEvents() {
-  for (const event in events) {
-    document.getElementById(
-      "event-infomation"
-    ).innerHTML += `<div id="event${event}" class="events div-border hover-darken" onclick="displayEventInfo(${event})"><h3> 
-        ${events[event].eventDate} - ${events[event].eventName}<br>
-        ${events[event].eventLocation}
-        </h3></div>`;
-  }
-});
-// This code pre populates the header-event-details div with event 0
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("event-details").innerHTML = `
-    <h3>${events[0].eventName}</h3>
-    ${events[0].eventInfo}`;
-});
-
-//This code prepopulates the skills section with all of the skills when the DOM is loaded, this it to assist with screenreaders
-document.addEventListener("DOMContentLoaded", function loadSkills() {
-  let skillsGeneralRules = document.getElementById("skill-rules-general");
-  let skillOriginRules = document.getElementById("skill-rules-origin");
-  for (const skill in generalSkills) {
-    skillsGeneralRules.innerHTML += `
-        <div id=${generalSkills[skill].name} class="skill-box section-style">
-            <span class="skill-heading section-style"><h3>${replaceDashesWithSpaces(
-              capitalizeFirstLetter(generalSkills[skill].name)
-            )}</h3><h3>${generalSkills[skill].cost}</h3></span>
-            <p>${generalSkills[skill].description}</p>
-        </div>
-        `;
-  }
-  for (const skill in originSkills) {
-    skillOriginRules.innerHTML += `
-        <div id=${originSkills[skill].name} class="skill-box section-style">
-            <span class="skill-heading section-style"><h3>${replaceDashesWithSpaces(
-              capitalizeFirstLetter(originSkills[skill].name)
-            )}</h3><h3>${originSkills[skill].cost}</h3></span>
-            <h3>Origin: ${capitalizeFirstLetter(
-              originSkills[skill].origin
-            )}</h3> 
-            <p>${originSkills[skill].description}</p>
-        </div>
-        `;
-  }
-});
-
 let map;
 
 async function initMap() {
@@ -418,13 +370,3 @@ function displaySkill(skillName) {
     skillLabel.classList.remove("skill-selected");
   }
 }
-
-// Form Buttons
-const refreshButton = document.getElementById("character-clear");
-/**
- * This function freshes the current page
- */
-function refreshPage() {
-  location.reload();
-}
-refreshButton.addEventListener("click", refreshPage);
