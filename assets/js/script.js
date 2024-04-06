@@ -266,19 +266,23 @@ function displayOrigin(origin) {
     document.getElementById("skill-points-remaining").innerText = 6;
   } else if (origin == "wastelander") {
     picture.innerHTML = `<img class="aside-image" src="assets/images/character-wastelander.jpeg" alt="Digital art of a human facing the viewer dressed in rags with a gasmask in a shanty town">`;
-    description.innerHTML = "Placeholder";
+    description.innerHTML = 
+      "A Wastelander is a survivor of the wastes, they live in shanty towns. They wears leathers, cloths and aparatus needed to survive theharsh lands.";
     document.getElementById("skill-points-remaining").innerText = 6;
   } else if (origin == "twisted") {
     picture.innerHTML = `<img class="aside-image" src="assets/images/character-twisted.jpeg" alt="Digital art of a human with clown make up sitting on a curb with the ruins of sociaty behind him">`;
-    description.innerHTML = "Placeholder";
+    description.innerHTML = 
+      "A Twisted belongs to a clan that idolizes faded imagry of the old world. They adorn themselves with their icon's likeness";
     document.getElementById("skill-points-remaining").innerText = 6;
   } else if (origin == "altered") {
     picture.innerHTML = `<img class="aside-image" src="assets/images/character-altered.jpeg" alt="Digital Art of a Mutated human with elven ears wearing clothes made from leaves">`;
-    description.innerHTML = "Placeholder";
+    description.innerHTML = 
+      "A Altered has been changed by the magic caused by the calamity, their flesh has been warped to include changes such as angular features, tucks or rough hides.";
     document.getElementById("skill-points-remaining").innerText = 6;
   } else if (origin == "enhanced") {
     picture.innerHTML = `<img class="aside-image" src="assets/images/character-enhanced.jpeg" alt="Digital art of a Bipedal Robotic machine with animalist features">`;
-    description.innerHTML = "Placeholder";
+    description.innerHTML = 
+      "A Enhanced is infused with technology of the old world. Pre calamity personalities inside mecanical constructs that have no memory of where they came from.";
     document.getElementById("skill-points-remaining").innerText = 6;
   }
 }
