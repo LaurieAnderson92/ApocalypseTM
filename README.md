@@ -219,8 +219,6 @@ To fork the ApocalyseTM repository:
   <li>Click the Fork button in the top right corner.</li>
 </ol>
 
-
-
 #### How to Clone
 
 <ol>
