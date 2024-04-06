@@ -53,33 +53,33 @@
                 <!-- Name input-->
                 <div class="form-group" id="form-playerdetails">
                     <span class="form-input">
-                        <label class="form-label" for="player-name"><p>Player Name</p></label>  
+                        <label class="form-label" for="player-name">Player Name</label>  
                         <input id="player-name" name="playername" type="text" placeholder="" class="form-control" required>
                     </span>
                     <hr>
                     <span class="form-input">
-                        <label class="form-label" for="character-name"><p>Character Name</p></label>  
+                        <label class="form-label" for="character-name">Character Name</label>  
                         <input id="character-name" name="character-name" type="text" placeholder="" class="form-control" required>
                     </span>
                     <hr>
                     <span class="form-input">
-                        <label class="form-label" for="player-email"><p>Email Address</p></label>  
+                        <label class="form-label" for="player-email">Email Address</label>  
                         <input id="player-email" name="player-email" type="email" placeholder="" class="form-control" required>
                     </span>
                     <hr>    
                 </div>
             <!-- Skills input -->
                 <div id="form-origin">
-                    <div id="skill-points" class="form-group"><p>Skill Points:&nbsp</p><div id="skill-points-remaining">6</div></div>
+                    <div id="skill-points" class="form-group"><p>Skill Points:&nbsp;</p><div id="skill-points-remaining">6</div></div>
                     <span class="form-group" id="form-origindetails">
                         <label class="form-label" for="character-origin"><p>Origin</p></label>
                         <select id="character-origin" name="character-origin" class="form-control" onchange="displayOrigin(this.value), formFetchSkills(), displayOriginSkills(this.value)" required>
-                            <option value="blank"></option>  
-                            <option value="dweller"><p>Dweller</p></option>
-                            <option value="wastelander"><p>Wastelander</p></option>
-                            <option value="twisted"><p>Twisted</p></option>
-                            <option value="altered"><p>Altered</p></option>
-                            <option value="enhanced"><p>Enhanced</p></option>
+                            <label for="blank-form-option"></label><option id="blank-form-option" value="blank"></option>  
+                            <option value="dweller">Dweller</option>
+                            <option value="wastelander">Wastelander</option>
+                            <option value="twisted">Twisted</option>
+                            <option value="altered">Altered</option>
+                            <option value="enhanced">Enhanced</option>
                         </select>
                     </span>
                 </div>
@@ -93,7 +93,7 @@
                 <input  type="submit" id="character-submit" name="character-submit" class="btn btn-success">
             </label>
             <label class="form-button" for="character-clear">
-                <button id="character-clear" name="character-clear" class="btn btn-clear"><p>Clear</p></button>
+                <button id="character-clear" name="character-clear" class="btn btn-clear">Clear</button>
             </label>
             </div>
         </form>
@@ -107,7 +107,7 @@
         <div id="character-picture" class="bottom-image">
             <p id="origin-description"></p>
         </div>
-        <div class="event-group"><h2 class="hidden"><h2 class="hidden">Events</h2>
+        <div class="event-group"><h2 class="hidden">Events</h2>
             <!-- This is the landing zone for where the event objects will end up -->
             <div id="event-infomation" class=""></div>
             <!-- This is the landing zone for where the details for the event will appear when the above divs are clicked -->
