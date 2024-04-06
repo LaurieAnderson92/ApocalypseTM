@@ -157,6 +157,7 @@ The Character Page
 
 - A Mechanisum for storing characters.
 - A way to upgrade skills for existing characters
+- Wrap for in loops in if statements to filter unwanted properties
 
 ### Accessibility
 
@@ -248,7 +249,18 @@ The following issues were raised during my end project meeting with my mentor:
 
 ### Validation
 
+The results of the validatior jshint. 
 
+It stated some undefined variables, but they are refrenced in the other .js files
+
+There are two warnings:
+- "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype." - This has been added to future enhancements.
+- "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics." - A comment has been added in to explain this as part of the function
+
+[JShint Character](assets/documentation/jshint-character.png)
+[JShint Events](assets/documentation/jshint-events.png)
+[JShint Script](assets/documentation/jshint-script.png)
+[JShint Skills](assets/documentation/jshint-skills.png)
 
 ## Credits
 

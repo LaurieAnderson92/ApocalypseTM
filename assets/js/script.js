@@ -287,6 +287,11 @@ function displayOrigin(origin) {
   }
 }
 
+/**
+ * This function looks over the skills and displays a skill assosiated with a origin
+ * param origin: is the option from the select box in character.html
+ * Note: This Function declares a within loop that referencing an outer scoped variable
+ */
 function displayOriginSkills(origin) {
   let originSkills = document.getElementsByClassName(origin);
   let skillPointsAvailable = parseInt(
