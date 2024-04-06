@@ -167,6 +167,10 @@ I have tried to code defensively and ensuring that the website is as accessible 
 - Providing information for screen readers where there are icons used and no text - such as the Social media links via aria labels.
 - Ensuring that there is a sufficient colour contrast throughout the site.
 
+Below are the Lighthouse ratings for eache html page:
+
+![lighthouse-testing](assets/documentation/apoctm-lighthouse.png)
+
 ## Technologies Used
 
 ### Languages Used
@@ -229,7 +233,9 @@ To fork the ApocalyseTM repository:
   <li>Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.</li>
 </ol>
 
-## Testing
+## Testing & Validation
+
+### Testing
 
 Testing was ongoing throughout the project. I utilised Chrome developer tools while building the site to troubleshoot any issues as I went along.
 
@@ -239,6 +245,10 @@ The following issues were raised during my end project meeting with my mentor:
 <li>There was a few errors firing when certain pages loaded, scripts that Ran when the DOM loaded were running on every page. Script split into four .js files to prevent those errors.</li>
 <li>There wasn't enough comments explaining code layout and funtionality, this has now been added.</li>
 </ul>
+
+### Validation
+
+
 
 ## Credits
 
