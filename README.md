@@ -6,8 +6,6 @@ ApocalypseTM acts as a advert and a point of refrence for a upcoming UK based Li
 
 https://laurieanderson92.github.io/ApocalypseTM/
 
-If you want to add optional [shields.io](https://shields.io) badges to your README, I like to add them to this section.
-
 ---
 
 ## CONTENTS
@@ -45,7 +43,6 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
   * [Acknowledgments](#acknowledgments)
 
 ---
-test
 
 ## User Experience (UX)
 
@@ -53,7 +50,7 @@ test
 
 ApocalypseTM is a upcoming Live Action Role-Play based in the South West of England, Most of the space used is in Discord and Facebook which doesn't gell well with a interactive and tone setting experience. The Organizers of the game are spending a large amount of time manualy awnsering questions and repeating awnsers. This site aims to consense the relevant information and is designed to be easily updatable as the game continues.
 
-#### Key information for the site
+### Key information for the site
 
 - The rules of the game, easily accessible on a mobile device while in play.
 - A way to create a character without the need for mental maths
@@ -83,7 +80,12 @@ Users who may use the website to help them run the game.
 
 ## Design
 
-👩🏻‍💻 View an example of a completed design section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022#Design)
+ApocalypseTM was designed with a sleek and minimalist aesthetic, emphasizing functionality and ease of navigation for users. 
+The layout is clean and well-organized, featuring a simple yet effective color scheme that combines muted tones with pops of 
+vibrant colors to draw attention to key elements. The use of sans-serif fonts enhances readability and contributes to the 
+modern and polished look of the site.
+
+![Design Layout](assets/documentation/design-index.png)
 
 ### Colour Scheme
 
@@ -128,35 +130,44 @@ The website is comprised of seven pages, five of which are accessible from the n
 All of the website pages have:
 
 - A responsive navigation bar at the top which allows the user to navigate around the website. above the bar is a banner image that scales based on with and can expand into 4 images that depict the scene and tone of the game. The dropdown bar is behind the burger icon and is animated to be interactable and the rules button is front and center for easy reference, particularly on mobile devices.
-
 - A footer that conatins the copywright information along with the socials of the webpage.
-
 - Responsive controls that prevents the content from getting too wide on large and high resolution monitors above 1440px width.
+- A display of the events that are running this year along wit their synopsis.
 
-### Index 
+The Home Page.
+- A API callout to google maps to that then display the evnts location for a year
+- A about us section dedicated to welcoming new players and explaing LARPING as a hobby as well as an introduction to Apocolypse now
+
+The Rules Page
+- A secondary Nav display, to navigate around the different rule types Conduct rules/Game Rules and Skill Rules to keep the page length down and to hone in on relevant information when using a limited screen size.
+- Three sections that are initially hidden, but are revealed when the div in the Nav section described above is clicked.
+- A page that auto populates from the object array of skills, so that chnages to the skills in the JS appear throughout the website.
+
+The FAQ page.
+- A section that displays frequently asked questions and their awnsers.
+- A API callout to google maps to that then display the evnts location for a year
+
+The World Page
+-  A section that goes into detail about the setting of the world
+
+The Character Page
+- A mecanisum for creating a ncharacter in the setting.
 
 ### Future Implementations
 
-What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
-
-### Colour Scheme
-
+- A Mechanisum for storing characters.
+- A way to upgrade skills for existing characters
 
 ### Accessibility
 
-Be an amazing developer and get used to thinking about accessibility in all of your projects!
+I have tried to code defensively and ensuring that the website is as accessible friendly as possible. I have achieved this by:
 
-This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
-
-Have you used icons and added aria-labels to enable screen readers to understand these?
-Have you ensured your site meets the minimum contrast requirements?
-Have you chosen fonts that are dyslexia/accessible friendly?
-
-Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
+- Using semantic HTML.
+- Using descriptive alt attributes on images on the site.
+- Providing information for screen readers where there are icons used and no text - such as the Social media links via aria labels.
+- Ensuring that there is a sufficient colour contrast throughout the site.
 
 ## Technologies Used
-
-👩🏻‍💻 View an example of a completed Technologies Used section [here](https://github.com/kera-cudmore/Bully-Book-Club#Technologies-Used)
 
 ### Languages Used
 
@@ -172,18 +183,28 @@ Make sure to include things like git, GitHub, the program used to make your wire
 
 A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
 
-- git
-- Github
-- Balsamiq
-- Googlemaps API
+- Git - used to controle versions
+- Github Aced as the reposirty for the projectr
+- Balsamiq - Used to create wireframes.
+- Googlemaps API - Callout for the map
+- Google Fonts - To import the fonts used on the website.
+- Font Awesome - For the iconography on the website.
+- Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+- [Favicon.io](https://favicon.io/) - To create favicon.
+- [Am I Responsive?](https://ui.dev/amiresponsive) - To show the website image on a range of devices.
 
 ## Deployment & Local Development
 
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
-
 ### Deployment
 
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
+<ol>
+  <li>Log in (or sign up) to Github.</li>
+  <li>Find the repository for this project, [ApocalypseTM](https://github.com/LaurieAnderson92/ApocalypseTM)</li>
+  <li>Click on the Settings link.</li>
+  <li>Click on the Pages link in the left hand side navigation bar.</li>
+  <li>In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.</li>
+  <li>Click Save. Your live Github Pages site is now deployed at the URL shown.</li>
+</ol>
 
 ### Local Development
 
@@ -191,29 +212,41 @@ The local development section gives instructions on how someone else could make 
 
 #### How to Fork
 
-Place instructions on how to fork your project here.
+To fork the ApocalyseTM repository:
+<ol>
+  <li>Log in (or sign up) to Github.</li>
+  <li>Go to the repository for this project: https://github.com/LaurieAnderson92/ApocalypseTM</li>
+  <li>Click the Fork button in the top right corner.</li>
+</ol>
+
+
 
 #### How to Clone
 
-Place instructions on how to clone your project here.
+<ol>
+  <li>Log in (or sign up) to GitHub.</li>
+  <li>Go to the repository for this project: https://github.com/LaurieAnderson92/ApocalypseTM</li>
+  <li>Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.</li>
+  <li>Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.</li>
+  <li>Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.</li>
+</ol>
 
 ## Testing
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
+Testing was ongoing throughout the project. I utilised Chrome developer tools while building the site to troubleshoot any issues as I went along.
 
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
+The following issues were raised during my end project meeting with my mentor:
+<ul>
+<li>The site didn't have very clear margins. Margins have been added to bring it in alignment so that tect is easy to read.</li>
+<li>There was a few errors firing when certain pages loaded, scripts that Ran when the DOM loaded were running on every page. Script split into four .js files to prevent those errors.</li>
+<li>There wasn't enough comments explaining code layout and funtionality, this has now been added.</li>
+</ul>
 
 ## Credits
 
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
-
 ### Code Used
 
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
+[Google Maps API tutorial](https://developers.google.com/maps/documentation/javascript?_gl=1*1rqigl6*_up*MQ..*_ga*MjQ0MDU2MzA2LjE3MTI0MzEzODc.*_ga_NRWSTWS78N*MTcxMjQzMTM4Ny4xLjAuMTcxMjQzMTM4Ny4wLjAuMA..)
 
 ### Content
 
@@ -221,12 +254,9 @@ The content was provided by myself and a friend called Richard Morgan, who is on
 
 ###  Media
 
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
-
 AI generated art from: [Deep Ai](https://deepai.org/)
   
 ###  Acknowledgments
 
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
-
 Thank you to [Kera Cudmore](https://github.com/kera-cudmore) for her help with a readme format and supplying this template
+Thank you to my Mentor Rory Patrick fior asising me throught the project
