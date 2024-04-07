@@ -74,7 +74,7 @@
                     <span class="form-group" id="form-origindetails">
                         <label class="form-label" for="character-origin">Origin</label>
                         <select id="character-origin" name="character-origin" class="form-control" onchange="displayOrigin(this.value), formFetchSkills(), displayOriginSkills(this.value)" required>
-                            <label for="blank-form-option"><option id="blank-form-option" value="blank" style="display:none"></option></label>
+                            <option id="blank-form-option" value="blank" style="display:none" label>Pick an Origin to begin</option>
                             <option value="dweller">Dweller</option>
                             <option value="wastelander">Wastelander</option>
                             <option value="twisted">Twisted</option>
@@ -83,7 +83,7 @@
                         </select>
                     </span>
                 </div>
-                <div class="form-group" id="form-characterskills"><p class="section-style">Pick an Origin to begin</p></div>
+                <div class="form-group" id="form-characterskills"><p class="section-style"></p></div>
                 <div class="form-group" id="character-skilllist"></div>
 
             </fieldset>
