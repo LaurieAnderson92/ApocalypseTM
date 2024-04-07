@@ -172,6 +172,10 @@ Below are the Lighthouse ratings for eache html page:
 
 ![lighthouse-testing](assets/documentation/apoctm-lighthouse.png)
 
+![jigsaw-testing](assets/documentation/apoctm-cssvalidation-jigsaw.png)
+
+![w3c-testing](assets/documentation/apoctm-htmlvalidation-w3c.png)
+
 ## Technologies Used
 
 ### Languages Used
