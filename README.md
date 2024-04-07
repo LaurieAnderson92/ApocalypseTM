@@ -251,6 +251,18 @@ The following issues were raised during my end project meeting with my mentor:
 <li>There wasn't enough comments explaining code layout and funtionality, this has now been added.</li>
 </ul>
 
+### Bugs
+
+I enountered many bugs while I was creating this website. The most troublesome of them that required a higher degree of testing and troubelshooting have been documented below
+
+| description | commit # |
+| -------- | ------- |
+| Height and withd used in CSS, chnaged to Min/max height and with to allow for responsive design | 7e685c3 |
+| Errors when loading pages, this was caused by event listeners that were only needed for certain pages, so different .js files were created  | 3baf898 |
+| The icons for the socials and the links were broken | 5701757 |
+| The initMap function was displaying australia as the default location for the map, this required editing the function to include the correct coordinates | 167676e |
+| The size of the dropdown was needlessly big and didn't line up when viewing through a monitor with a width of < 1440px | c991612 & b44ba50 |
+
 ### Validation
 
 The results of the validatior jshint. 
