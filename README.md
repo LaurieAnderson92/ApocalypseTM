@@ -168,13 +168,13 @@ I have tried to code defensively and ensuring that the website is as accessible 
 - Providing information for screen readers where there are icons used and no text - such as the Social media links via aria labels.
 - Ensuring that there is a sufficient colour contrast throughout the site.
 
-Below are the Lighthouse ratings for eache html page:
+The code has been validated using lighthouse, w3c and Jugsaw, the reults are below:
 
-![lighthouse-testing](assets/documentation/apoctm-lighthouse.png)
+[Lighthouse Testing](assets/documentation/apoctm-lighthouse.png)
 
-![jigsaw-testing](assets/documentation/apoctm-cssvalidation-jigsaw.png)
+[Jigsaw-Testing](assets/documentation/apoctm-cssvalidation-jigsaw.png)
 
-![w3c-testing](assets/documentation/apoctm-htmlvalidation-w3c.png)
+[W3 Testing](assets/documentation/apoctm-htmlvalidation-w3c.png)
 
 ## Technologies Used
 
