@@ -129,17 +129,17 @@ The website is comprised of seven pages, five of which are accessible from the n
 
 All of the website pages have:
 
-- A responsive navigation bar at the top which allows the user to navigate around the website. above the bar is a banner image that scales based on with and can expand into 4 images that depict the scene and tone of the game. The dropdown bar is behind the burger icon and is animated to be interactable and the rules button is front and center for easy reference, particularly on mobile devices.
-- A footer that conatins the copywright information along with the socials of the webpage.
-- Responsive controls that prevents the content from getting too wide on large and high resolution monitors above 1440px width.
-- A display of the events that are running this year along wit their synopsis.
+- A responsive [navigation bar](assets/documentation/features-navbar.png) at the top which allows the user to navigate around the website. above the bar is a banner image that scales based on with and can expand into 4 images that depict the scene and tone of the game. The dropdown bar is behind the burger icon and is animated to be interactable and the rules button is front and center for easy reference, particularly on mobile devices.
+- A [footer](assets/documentation/features-footer.png) that conatins the copywright information along with the socials of the webpage.
+- [Responsive design](assets/documentation/features-responsive-design.png) that prevents the content from getting too wide on large and high resolution monitors above 1440px width.
+- A display of the [events](assets/documentation/features-events.png) that are running this year along wit their synopsis.
 
 The Home Page.
 - A API callout to google maps to that then display the evnts location for a year
 - A about us section dedicated to welcoming new players and explaing LARPING as a hobby as well as an introduction to Apocolypse now
 
 The Rules Page
-- A secondary Nav display, to navigate around the different rule types Conduct rules/Game Rules and Skill Rules to keep the page length down and to hone in on relevant information when using a limited screen size.
+- A [secondary Nav display](assets/documentation/features-secondrynav.png), to navigate around the different rule types Conduct rules/Game Rules and Skill Rules to keep the page length down and to hone in on relevant information when using a limited screen size.
 - Three sections that are initially hidden, but are revealed when the div in the Nav section described above is clicked.
 - A page that auto populates from the object array of skills, so that chnages to the skills in the JS appear throughout the website.
 
@@ -151,7 +151,7 @@ The World Page
 -  A section that goes into detail about the setting of the world
 
 The Character Page
-- A mecanisum for creating a ncharacter in the setting.
+- A [form for creating a character](assets/documentation/features-charactercreator.png) in the setting.
 
 ### Future Implementations
 
