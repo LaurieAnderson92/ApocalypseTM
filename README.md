@@ -255,7 +255,7 @@ The following issues were raised during my end project meeting with my mentor:
 
 I enountered many bugs while I was creating this website. The most troublesome of them that required a higher degree of testing and troubelshooting have been documented below
 
-| description | commit # |
+| Description | Commit # |
 | -------- | ------- |
 | Height and withd used in CSS, chnaged to Min/max height and with to allow for responsive design | 7e685c3 |
 | Errors when loading pages, this was caused by event listeners that were only needed for certain pages, so different .js files were created  | 3baf898 |
